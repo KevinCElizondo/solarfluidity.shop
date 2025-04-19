@@ -1,10 +1,11 @@
 [build]
-  command = "npm run build"
+  command = "npm install && NEXT_TELEMETRY_DISABLED=1 npx --yes next build"
   publish = ".next"
   
 [build.environment]
   NODE_VERSION = "18"
-  NPM_FLAGS = "--no-optional"
+  NPM_FLAGS = "--legacy-peer-deps --omit=optional"
+  NEXT_TELEMETRY_DISABLED = "1"
 
 [dev]
   command = "npm run dev"
@@ -15,10 +16,11 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# La siguiente redirección no es necesaria para Next.js ya que el plugin se encarga de eso
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
 
 [functions]
   directory = "netlify/functions"
