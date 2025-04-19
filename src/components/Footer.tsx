@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white pt-12 pb-6">
+    <footer className="bg-gradient-to-r from-blue-900 via-indigo-900 to-blue-900 text-white pt-12 pb-6 border-t border-blue-500/30">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1">
@@ -61,38 +61,49 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contacto</h3>
             <ul className="space-y-2 text-gray-300">
               <li className="flex items-start">
-                <svg className="h-6 w-6 mr-2 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-6 w-6 mr-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <span>info@solarfluidity.shop</span>
               </li>
               <li className="flex items-start">
-                <svg className="h-6 w-6 mr-2 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                <svg className="h-6 w-6 mr-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
                 </svg>
-                <span>+506 8888-8888</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="h-6 w-6 mr-2 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span>San José, Costa Rica</span>
+                <span>Global | 100% Online</span>
               </li>
             </ul>
           </div>
         </div>
         
-        <div className="pt-8 mt-8 border-t border-gray-700">
+        <div className="pt-8 mt-8 border-t border-blue-500/20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="text-sm text-gray-400">
-              <p>&copy; {new Date().getFullYear()} SolarFluidity.shop. Todos los derechos reservados.</p>
+            <div className="text-sm text-blue-100/80">
+              <p className="flex items-center">
+                <svg className="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 110-12 6 6 0 010 12z" clipRule="evenodd" />
+                </svg>
+                &copy; {new Date().getFullYear()} SolarFluidity.shop <span className="inline-block h-1 w-1 rounded-full bg-blue-400 mx-2"></span> Tecnología Solar del Futuro
+              </p>
             </div>
-            <div className="text-sm text-gray-400 md:text-right">
-              <p className="mb-2"><strong>Aviso de Afiliado:</strong> Como participante en el Programa de Afiliados de Amazon, este sitio obtiene ingresos por las compras realizadas a través de los enlaces de afiliado. Esto no representa ningún costo adicional para usted.</p>
-              <p>
-                <Link href="/politica-de-privacidad" className="text-blue-400 hover:underline">Política de Privacidad</Link> | 
-                <Link href="/terminos-y-condiciones" className="text-blue-400 hover:underline ml-2">Términos y Condiciones</Link>
+            <div className="text-sm text-blue-100/80 md:text-right">
+              <p className="mb-2 backdrop-blur-sm bg-blue-900/20 p-2 rounded-lg inline-block">
+                <span className="inline-block bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-2 py-0.5 rounded mr-1 font-medium">AFFILIATE</span> 
+                Como participante en el Programa de Afiliados de Amazon, este sitio obtiene ingresos por las compras realizadas a través de los enlaces de afiliado.
+              </p>
+              <p className="flex flex-wrap md:justify-end gap-4 mt-3">
+                <Link href="/politica-de-privacidad" className="text-blue-200 hover:text-white transition-colors flex items-center">
+                  <svg className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                  Política de Privacidad
+                </Link> 
+                <Link href="/terminos-y-condiciones" className="text-blue-200 hover:text-white transition-colors flex items-center">
+                  <svg className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  Términos y Condiciones
+                </Link>
               </p>
             </div>
           </div>
