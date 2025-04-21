@@ -9,7 +9,11 @@ Esta guía detalla los pasos necesarios para dejar SolarFluidity.shop 100% funci
 4. [Marketing Digital](#4-marketing-digital)
 5. [Monetización](#5-monetización)
 6. [Mantenimiento](#6-mantenimiento)
-7. [Analítica y Mejora Continua](#7-analítica-y-mejora-continua)
+7. [Implementación de Productos](#7-implementación-de-productos)
+8. [Integración de Imágenes](#8-integración-de-imágenes)
+9. [Configuración de Docker](#9-configuración-de-docker)
+10. [Integración con Inteligencia Artificial](#10-integración-con-inteligencia-artificial)
+11. [Analítica y Mejora Continua](#11-analítica-y-mejora-continua)
 
 ---
 
@@ -259,7 +263,338 @@ NEXT_PUBLIC_SITE_URL=https://solarfluidity.shop
 
 ---
 
-## 7. Analítica y Mejora Continua
+## 7. Implementación de Productos
+
+### Estructura de Datos
+1. **Organización de Productos**:
+   - Los productos están organizados por categorías en `src/data/products.ts`
+   - Los tipos de datos se definen en `src/types/product.ts`
+
+2. **Añadir Nuevos Productos**:
+   ```typescript
+   // Añadir a la lista de productos en src/data/products.ts
+   {
+     id: 'nuevo-producto',
+     name: 'Nuevo Producto Solar',
+     description: 'Descripción detallada del producto...',
+     price: 599.99,
+     discountPrice: 549.99,  // null si no hay descuento
+     categoryId: 'categoria-id', // debe existir en categories
+     features: ["Característica 1", "Característica 2"],
+     specifications: {
+       atributo1: "valor1",
+       atributo2: "valor2"
+     },
+     imageUrl: '/images/products/nuevo-producto.jpg',
+     gallery: [
+       '/images/products/nuevo-producto-1.jpg',
+       '/images/products/nuevo-producto-2.jpg'
+     ],
+     stock: 10,
+     rating: 4.7,
+     reviews: 15,
+     isNew: true,
+     isFeatured: false,
+     slug: 'nuevo-producto-solar'
+   }
+   ```
+
+3. **Añadir Nueva Categoría**:
+   ```typescript
+   // Añadir a la lista de categorías en src/data/products.ts
+   {
+     id: 'nueva-categoria',
+     name: 'Nueva Categoría',
+     description: 'Descripción de la categoría...',
+     imageUrl: '/images/categories/nueva-categoria.jpg',
+     slug: 'nueva-categoria'
+   }
+   ```
+
+### Páginas de Productos
+1. **Estructura de Directorios**:
+   - `src/app/productos/page.tsx`: Lista de productos
+   - `src/app/productos/[slug]/page.tsx`: Detalles de producto individual
+   - `src/app/categorias/page.tsx`: Lista de categorías
+   - `src/app/categorias/[slug]/page.tsx`: Productos por categoría
+
+2. **Modificación de Plantillas**:
+   - Puedes personalizar las plantillas modificando los archivos anteriores
+   - Ajusta el diseño, disposición y elementos según tus necesidades
+   - Añade nuevas funcionalidades como filtros, ordenación, búsqueda
+
+---
+
+## 8. Integración de Imágenes
+
+### Estructura de Directorios de Imágenes
+1. **Organización**:
+   - `/public/images/products/`: Imágenes principales de productos
+   - `/public/images/products/{product-id}-{n}.jpg`: Galerías de productos
+   - `/public/images/categories/`: Imágenes de categorías
+   - `/public/images/blog/`: Imágenes para artículos del blog
+
+2. **Requisitos de Imágenes**:
+   - Productos: Imágenes cuadradas de 800x800px
+   - Categorías: Imágenes de proporción 16:9 (1200x675px)
+   - Blog: Imágenes de proporción 16:9 (1200x675px)
+   - Formatos recomendados: WebP o JPEG optimizado
+
+3. **Optimización de Imágenes**:
+   - Utiliza herramientas como Squoosh, TinyPNG o ImageOptim
+   - Implementa carga progresiva con Next.js Image
+   - Mantén el tamaño de archivo por debajo de 200KB si es posible
+
+4. **Nombrado de Archivos**:
+   - Usa nombres descriptivos con palabras clave
+   - Separa palabras con guiones, no espacios
+   - Evita caracteres especiales o tildes
+
+---
+
+## 9. Configuración de Docker
+
+### Contenedores y Orquestación
+1. **Estructura de Docker**:
+   - El proyecto ya incluye un `Dockerfile` y `docker-compose.yml` básicos
+   - Frontend (Next.js) y opcionalmente Backend (FastAPI)
+
+2. **Ejecución con Docker**:
+   ```bash
+   # Construir y levantar todos los servicios
+   docker-compose up --build
+
+   # Ejecutar en background
+   docker-compose up -d
+
+   # Detener los contenedores
+   docker-compose down
+   ```
+
+3. **Configuración Avanzada**:
+   - Añadir servicios adicionales (modifica `docker-compose.yml`):
+
+   ```yaml
+   version: '3.8'
+   services:
+     frontend:
+       build: .
+       ports:
+         - "3000:3000"
+       environment:
+         - NODE_ENV=production
+       volumes:
+         - ./:/app
+         - /app/node_modules
+
+     backend:
+       build: ./api
+       ports:
+         - "8000:8000"
+       environment:
+         - ENVIRONMENT=production
+       volumes:
+         - ./api:/app
+
+     # Servicio para agentes IA
+     ai-service:
+       build: ./ai-service
+       ports:
+         - "5000:5000"
+       environment:
+         - OPENAI_API_KEY=${OPENAI_API_KEY}
+       volumes:
+         - ./ai-service:/app
+   ```
+
+4. **Flujos de Trabajo con Docker**:
+   - Entorno de desarrollo: `docker-compose -f docker-compose.dev.yml up`
+   - Pruebas automatizadas: `docker-compose -f docker-compose.test.yml up`
+   - Producción: `docker-compose -f docker-compose.prod.yml up -d`
+
+---
+
+## 10. Integración con Inteligencia Artificial
+
+### Implementación de Pydantic AI
+1. **Configuración Inicial**:
+   - Crea la carpeta `ai-service` en la raíz del proyecto
+   - Estructura básica:
+
+   ```
+   ai-service/
+   ├── app.py               # API FastAPI para los servicios IA
+   ├── models/
+   │   ├── __init__.py
+   │   ├── product_recommendation.py  # Modelos Pydantic
+   │   └── content_generation.py      # Modelos para generación
+   ├── agents/
+   │   ├── __init__.py
+   │   ├── search_agent.py            # Agente de búsqueda
+   │   └── recommendation_agent.py     # Agente de recomendaciones
+   ├── utils/
+   │   ├── __init__.py
+   │   └── openai_client.py           # Utilidades para OpenAI
+   ├── requirements.txt
+   └── Dockerfile
+   ```
+
+2. **Modelos Pydantic**:
+   - Ejemplo de modelo para recomendaciones:
+
+   ```python
+   # models/product_recommendation.py
+   from pydantic import BaseModel, Field
+   from typing import List, Optional
+
+   class UserPreference(BaseModel):
+       budget_min: float = Field(..., description="Presupuesto mínimo del usuario")
+       budget_max: float = Field(..., description="Presupuesto máximo del usuario")
+       property_size: float = Field(..., description="Tamaño de la propiedad en metros cuadrados")
+       energy_needs: float = Field(..., description="Necesidades energéticas en kWh/mes")
+       roof_type: Optional[str] = Field(None, description="Tipo de techo")
+
+   class ProductRecommendation(BaseModel):
+       product_id: str = Field(..., description="ID del producto recomendado")
+       relevance_score: float = Field(..., description="Puntuación de relevancia de 0 a 1")
+       reasoning: str = Field(..., description="Razonamiento para esta recomendación")
+
+   class RecommendationResponse(BaseModel):
+       recommendations: List[ProductRecommendation] = Field(...)
+       explanation: str = Field(..., description="Explicación general de las recomendaciones")
+   ```
+
+### Integración de LangGraph
+1. **Flujos de Agentes**:
+   - Implementa LangGraph para orquestar agentes:
+
+   ```python
+   # agents/recommendation_agent.py
+   from langgraph.graph import StateGraph, END
+   from typing import Dict, Any
+   import openai
+
+   # Definir nodos del grafo
+   def analyze_user_requirements(state):
+       # Analiza los requisitos del usuario para entender sus necesidades
+       user_prefs = state["user_preferences"]
+       # Lógica con LLM para análisis...
+       return {"analyzed_requirements": analysis_result, **state}
+
+   def search_products(state):
+       # Busca productos basados en requisitos analizados
+       # Lógica para buscar en la base de datos de productos...
+       return {"candidate_products": products, **state}
+
+   def rank_and_explain(state):
+       # Ordena productos y proporciona explicaciones
+       # Lógica con LLM para clasificación...
+       return {"final_recommendations": recommendations, **state}
+
+   # Construir el grafo
+   workflow = StateGraph()
+   workflow.add_node("analyze_requirements", analyze_user_requirements)
+   workflow.add_node("search_products", search_products)
+   workflow.add_node("rank_and_explain", rank_and_explain)
+
+   # Definir el flujo
+   workflow.add_edge("analyze_requirements", "search_products")
+   workflow.add_edge("search_products", "rank_and_explain")
+   workflow.add_edge("rank_and_explain", END)
+
+   # Compilar el grafo
+   recommendation_agent = workflow.compile()
+   ```
+
+2. **API para Agentes**:
+   - Exponer los agentes a través de FastAPI:
+
+   ```python
+   # app.py
+   from fastapi import FastAPI, HTTPException
+   from models.product_recommendation import UserPreference, RecommendationResponse
+   from agents.recommendation_agent import recommendation_agent
+
+   app = FastAPI()
+
+   @app.post("/api/recommend", response_model=RecommendationResponse)
+   async def get_recommendations(preferences: UserPreference):
+       try:
+           result = recommendation_agent.invoke({"user_preferences": preferences.dict()})
+           return result["final_recommendations"]
+       except Exception as e:
+           raise HTTPException(status_code=500, detail=str(e))
+   ```
+
+### Integración con Frontend
+1. **Componentes React**:
+   - Crea componentes para interactuar con los agentes IA:
+
+   ```tsx
+   // src/components/ProductRecommender.tsx
+   import { useState } from 'react';
+   import { UserPreference, ProductRecommendation } from '@/types/ai';
+
+   export default function ProductRecommender() {
+     const [preferences, setPreferences] = useState<UserPreference>({...});
+     const [recommendations, setRecommendations] = useState<ProductRecommendation[]>([]);
+     const [loading, setLoading] = useState(false);
+
+     const handleSubmit = async (e: React.FormEvent) => {
+       e.preventDefault();
+       setLoading(true);
+       
+       try {
+         const response = await fetch('/api/recommend', {
+           method: 'POST',
+           headers: { 'Content-Type': 'application/json' },
+           body: JSON.stringify(preferences),
+         });
+         
+         const data = await response.json();
+         setRecommendations(data.recommendations);
+       } catch (error) {
+         console.error('Error fetching recommendations:', error);
+       } finally {
+         setLoading(false);
+       }
+     };
+
+     // Renderizar interfaz...
+   }
+   ```
+
+2. **API Routes en Next.js**:
+   - Configura rutas API para conectar con el servicio de IA:
+
+   ```tsx
+   // src/app/api/recommend/route.ts
+   import { NextRequest, NextResponse } from 'next/server';
+
+   export async function POST(request: NextRequest) {
+     try {
+       const body = await request.json();
+       
+       const response = await fetch(`${process.env.AI_SERVICE_URL}/api/recommend`, {
+         method: 'POST',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify(body),
+       });
+       
+       const data = await response.json();
+       return NextResponse.json(data);
+     } catch (error) {
+       return NextResponse.json(
+         { error: 'Error procesando la recomendación' },
+         { status: 500 }
+       );
+     }
+   }
+   ```
+
+---
+
+## 11. Analítica y Mejora Continua
 
 ### Implementación de Analítica
 1. **Google Analytics 4**:
