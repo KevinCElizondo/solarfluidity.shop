@@ -4,11 +4,14 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getCategoryBySlug, getProductsByCategory } from '@/data/products';
 
-export default function CategoryPage({
-  params,
-}: {
-  params: { slug: string }
-}) {
+type Props = {
+  params: {
+    slug: string
+  }
+}
+
+export default function CategoryPage(props: Props) {
+  const { params } = props;
   const category = getCategoryBySlug(params.slug);
   
   if (!category) {
