@@ -4,7 +4,11 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getProductBySlug, getCategoryBySlug } from '@/data/products';
 
-export default function ProductDetailPage({ params }: { params: { slug: string } }) {
+interface ProductDetailPageProps {
+  params: { slug: string }
+}
+
+export default function ProductDetailPage({ params }: ProductDetailPageProps) {
   const product = getProductBySlug(params.slug);
   
   if (!product) {
@@ -44,7 +48,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             />
           </div>
           <div className="grid grid-cols-4 gap-2">
-            {product.gallery.map((image, index) => (
+            {product.gallery.map((image: string, index: number) => (
               <div key={index} className="relative h-24 rounded-md overflow-hidden border border-gray-200 cursor-pointer hover:border-blue-500">
                 <Image
                   src={image}
@@ -175,7 +179,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             
             <h3 className="text-xl font-semibold mb-4">Características principales</h3>
             <ul className="space-y-2 mb-8">
-              {product.features.map((feature, index) => (
+              {product.features.map((feature: string, index: number) => (
                 <li key={index} className="flex items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -192,7 +196,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
               {Object.entries(product.specifications).map(([key, value]) => (
                 <div key={key} className="flex justify-between pb-2 border-b border-gray-200">
                   <span className="text-gray-600">{key.charAt(0).toUpperCase() + key.slice(1)}</span>
-                  <span className="font-medium">{value}</span>
+                  <span className="font-medium">{String(value)}</span>
                 </div>
               ))}
             </div>
