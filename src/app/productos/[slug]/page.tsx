@@ -4,11 +4,11 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getProductBySlug, getCategoryBySlug } from '@/data/products';
 
-interface ProductDetailPageProps {
+export default function ProductDetailPage({
+  params,
+}: {
   params: { slug: string }
-}
-
-export default function ProductDetailPage({ params }: ProductDetailPageProps) {
+}) {
   const product = getProductBySlug(params.slug);
   
   if (!product) {
