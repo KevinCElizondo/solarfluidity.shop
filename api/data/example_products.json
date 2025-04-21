@@ -1,0 +1,186 @@
+[
+  {
+    "id": "amazon-B09BFRQ1RT",
+    "asin": "B09BFRQ1RT",
+    "name": "Panel Solar Monocristalino 400W Alta Eficiencia",
+    "description": "Panel solar monocristalino de 400W con alta eficiencia de conversión. Ideal para instalaciones residenciales y sistemas off-grid. Resistente a condiciones climáticas adversas y con garantía de 25 años en rendimiento.",
+    "price": 279.99,
+    "discountPrice": 249.99,
+    "categoryId": "paneles",
+    "features": [
+      "Potencia: 400W",
+      "Tipo: Monocristalino",
+      "Eficiencia: 21.3%",
+      "Dimensiones: 1700 x 1000 x 35 mm",
+      "Garantía de 25 años en rendimiento",
+      "Resistente a condiciones climáticas adversas"
+    ],
+    "specifications": {
+      "potencia": "400W",
+      "tipo": "Monocristalino",
+      "voltaje": "24V",
+      "peso": "19.5 kg",
+      "dimensiones": "1700 x 1000 x 35 mm",
+      "garantia": "25 años"
+    },
+    "imageUrl": "/images/products/panel-mono-400w.jpg",
+    "gallery": [
+      "/images/products/panel-mono-400w-1.jpg",
+      "/images/products/panel-mono-400w-2.jpg"
+    ],
+    "stock": 15,
+    "rating": 4.8,
+    "reviews": 24,
+    "isNew": false,
+    "isFeatured": true,
+    "slug": "panel-solar-monocristalino-400w-alta-eficiencia"
+  },
+  {
+    "id": "amazon-B08KWZD1PY",
+    "asin": "B08KWZD1PY",
+    "name": "Batería LiFePO4 12V 100Ah Para Sistemas Solares",
+    "description": "Batería de fosfato de hierro y litio (LiFePO4) de 12V y 100Ah diseñada específicamente para sistemas de energía solar. Ofrece miles de ciclos de carga, mayor duración y rendimiento superior a las baterías tradicionales de plomo-ácido.",
+    "price": 699.99,
+    "discountPrice": null,
+    "categoryId": "baterias",
+    "features": [
+      "Capacidad: 100Ah",
+      "Voltaje: 12V",
+      "Química: LiFePO4 (fosfato de hierro y litio)",
+      "Más de 4000 ciclos de vida útil",
+      "BMS integrado para protección",
+      "Peso 50% menor que baterías de plomo-ácido equivalentes"
+    ],
+    "specifications": {
+      "capacidad": "100Ah",
+      "voltaje": "12V",
+      "quimica": "LiFePO4",
+      "ciclos_vida": "4000+",
+      "peso": "12.5 kg",
+      "dimensiones": "330 x 172 x 217 mm",
+      "garantia": "5 años"
+    },
+    "imageUrl": "/images/products/bateria-lifepo4-100ah.jpg",
+    "gallery": [
+      "/images/products/bateria-lifepo4-100ah-1.jpg",
+      "/images/products/bateria-lifepo4-100ah-2.jpg"
+    ],
+    "stock": 8,
+    "rating": 4.9,
+    "reviews": 37,
+    "isNew": true,
+    "isFeatured": true,
+    "slug": "bateria-lifepo4-12v-100ah-sistemas-solares"
+  },
+  {
+    "id": "amazon-B08JG5GBG5",
+    "asin": "B08JG5GBG5",
+    "name": "Inversor Solar Híbrido 3kW con MPPT",
+    "description": "Inversor solar híbrido de 3kW con controlador de carga MPPT integrado. Compatible con conexión a red y baterías, permite crear sistemas de respaldo para cortes de energía o sistemas completamente autónomos.",
+    "price": 1299.99,
+    "discountPrice": 1199.99,
+    "categoryId": "inversores",
+    "features": [
+      "Potencia: 3000W",
+      "Voltaje de batería: 48V DC",
+      "Controlador MPPT integrado de 80A",
+      "Salida: 120V/240V AC 60Hz",
+      "Modo híbrido: red eléctrica y baterías",
+      "Pantalla LCD para monitorización"
+    ],
+    "specifications": {
+      "potencia": "3000W",
+      "voltaje_entrada": "48V DC",
+      "voltaje_salida": "120V/240V AC",
+      "eficiencia": "97%",
+      "mppt": "80A",
+      "peso": "18.5 kg",
+      "dimensiones": "480 x 320 x 130 mm",
+      "garantia": "3 años"
+    },
+    "imageUrl": "/images/products/inversor-hibrido-3kw.jpg",
+    "gallery": [
+      "/images/products/inversor-hibrido-3kw-1.jpg",
+      "/images/products/inversor-hibrido-3kw-2.jpg"
+    ],
+    "stock": 5,
+    "rating": 4.7,
+    "reviews": 18,
+    "isNew": false,
+    "isFeatured": true,
+    "slug": "inversor-solar-hibrido-3kw-mppt"
+  },
+  {
+    "id": "amazon-B075QBSYX2",
+    "asin": "B075QBSYX2",
+    "name": "Kit Solar Completo Off-Grid 2kW",
+    "description": "Kit solar completo de 2kW para instalaciones off-grid. Incluye paneles solares, inversor, baterías, controlador de carga y todos los accesorios necesarios para instalar un sistema solar autónomo residencial.",
+    "price": 2999.99,
+    "discountPrice": 2799.99,
+    "categoryId": "kits",
+    "features": [
+      "6 Paneles solares 340W (total 2040W)",
+      "Inversor híbrido 3kW",
+      "4 Baterías LiFePO4 12V 100Ah",
+      "Controlador de carga MPPT 60A",
+      "Cables y conectores incluidos",
+      "Soporte de montaje para paneles"
+    ],
+    "specifications": {
+      "potencia_total": "2040W",
+      "almacenamiento": "4.8kWh",
+      "paneles": "6 x 340W",
+      "inversor": "3kW híbrido",
+      "voltaje_sistema": "48V",
+      "garantia": "2 años sistema completo"
+    },
+    "imageUrl": "/images/products/kit-solar-2kw.jpg",
+    "gallery": [
+      "/images/products/kit-solar-2kw-1.jpg",
+      "/images/products/kit-solar-2kw-2.jpg"
+    ],
+    "stock": 3,
+    "rating": 4.8,
+    "reviews": 12,
+    "isNew": false,
+    "isFeatured": true,
+    "slug": "kit-solar-completo-off-grid-2kw"
+  },
+  {
+    "id": "amazon-B07JVRY5T8",
+    "asin": "B07JVRY5T8",
+    "name": "Controlador de Carga Solar MPPT 40A",
+    "description": "Controlador de carga solar MPPT de 40A con eficiencia de conversión de hasta 98%. Compatible con sistemas de 12V/24V/36V/48V y baterías de litio o plomo-ácido.",
+    "price": 199.99,
+    "discountPrice": 179.99,
+    "categoryId": "accesorios",
+    "features": [
+      "Corriente máxima: 40A",
+      "Voltaje del sistema: 12V/24V/36V/48V automático",
+      "Compatible con baterías de litio y plomo-ácido",
+      "Eficiencia de conversión de hasta 98%",
+      "Pantalla LCD para monitoreo",
+      "Protección contra sobrecarga, descarga y cortocircuito"
+    ],
+    "specifications": {
+      "corriente": "40A",
+      "voltaje_sistema": "12V/24V/36V/48V",
+      "tipo_baterias": "Litio, AGM, Gel, Inundadas",
+      "eficiencia": "98%",
+      "peso": "2.3 kg",
+      "dimensiones": "210 x 151 x 59 mm",
+      "garantia": "2 años"
+    },
+    "imageUrl": "/images/products/controlador-mppt-40a.jpg",
+    "gallery": [
+      "/images/products/controlador-mppt-40a-1.jpg",
+      "/images/products/controlador-mppt-40a-2.jpg"
+    ],
+    "stock": 22,
+    "rating": 4.6,
+    "reviews": 41,
+    "isNew": false,
+    "isFeatured": false,
+    "slug": "controlador-carga-solar-mppt-40a"
+  }
+]

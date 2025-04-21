@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+  # Servicio principal: aplicación Next.js + API FastAPI
   app:
     build: .
     ports:
@@ -10,8 +11,40 @@ services:
       - .:/app
       - /app/node_modules
       - /app/.next
+      - amazon_data:/app/api/data
     environment:
       - NODE_ENV=development
-      - HOSTINGER_API_KEY=${HOSTINGER_API_KEY}
-      # Otros valores de entorno necesarios
+      - AMAZON_AFFILIATE_TAG=${AMAZON_AFFILIATE_TAG:-solarfluidity-20}
     restart: unless-stopped
+    depends_on:
+      - scheduler
+
+  # Servicio para programar tareas periódicas
+  scheduler:
+    build: 
+      context: .
+      dockerfile: ./api/Dockerfile.scheduler
+    volumes:
+      - ./api:/app/api
+      - amazon_data:/app/api/data
+    environment:
+      - AMAZON_AFFILIATE_TAG=${AMAZON_AFFILIATE_TAG:-solarfluidity-20}
+      - SCHEDULE_INTERVAL=${SCHEDULE_INTERVAL:-86400}  # Por defecto 24 horas
+    restart: unless-stopped
+
+  # Servicio para ejecutar el scraper bajo demanda
+  scraper:
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile.scraper
+    volumes:
+      - ./api:/app/api
+      - amazon_data:/app/api/data
+    environment:
+      - AMAZON_AFFILIATE_TAG=${AMAZON_AFFILIATE_TAG:-solarfluidity-20}
+    restart: "no"  # Solo se inicia manualmente
+    profiles:
+      - scraper-only
+
+volumes:
+  amazon_data:  # Volumen para almacenar datos extraídos de Amazon

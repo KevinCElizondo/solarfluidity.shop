@@ -1,0 +1,37 @@
+FROM python:3.10-slim
+
+# Instalar dependencias necesarias para Selenium
+RUN apt-get update && apt-get install -y \
+    wget \
+    gnupg \
+    unzip \
+    curl \
+    chromium \
+    chromium-driver
+
+WORKDIR /app/api
+
+# Copiar solo los archivos necesarios
+COPY api/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Configurar ChromeDriver para Selenium
+ENV PYTHONUNBUFFERED=1
+ENV DISPLAY=:99
+ENV CHROME_BIN=/usr/bin/chromium
+ENV CHROME_PATH=/usr/lib/chromium/
+ENV CHROMEDRIVER_PATH=/usr/bin/chromedriver
+
+# Crear directorio para datos
+RUN mkdir -p /app/api/data
+
+# Script de ejecución
+COPY api/amazon_product_scraper.py /app/api/
+COPY api/amazon_affiliate.py /app/api/
+COPY api/update_products.py /app/api/
+
+# Script de entrada
+COPY api/entrypoint-scraper.sh /app/api/
+RUN chmod +x /app/api/entrypoint-scraper.sh
+
+ENTRYPOINT ["/app/api/entrypoint-scraper.sh"]

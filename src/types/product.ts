@@ -9,6 +9,8 @@ export interface Product {
   categoryId: string;
   features: string[];
   specifications: Record<string, string>;
+  amazonAsin?: string;  // ASIN de Amazon (identificador único del producto)
+  amazonAffiliateLink?: string;  // Enlace de afiliado completo
   imageUrl: string;
   gallery: string[];
   stock: number;
