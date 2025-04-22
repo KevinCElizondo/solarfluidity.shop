@@ -1,23 +1,32 @@
 version: '3.8'
 
 services:
-  # Servicio principal: aplicación Next.js + API FastAPI
   app:
     build: .
     ports:
-      - "3000:3000"  # Next.js
-      - "8000:8000"  # FastAPI
+      - "3000:3000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      - NODE_ENV=development
+      - OLLAMA_HOST=http://host.docker.internal:11434
+      - AMAZON_AFFILIATE_TAG=${AMAZON_AFFILIATE_TAG:-solarfluidity-20}
     volumes:
       - .:/app
       - /app/node_modules
       - /app/.next
       - amazon_data:/app/api/data
-    environment:
-      - NODE_ENV=development
-      - AMAZON_AFFILIATE_TAG=${AMAZON_AFFILIATE_TAG:-solarfluidity-20}
-    restart: unless-stopped
     depends_on:
-      - scheduler
+      - ollama
+
+  # Servicio Ollama para generación de contenido
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+    restart: unless-stopped
 
   # Servicio para programar tareas periódicas
   scheduler:
@@ -30,7 +39,10 @@ services:
     environment:
       - AMAZON_AFFILIATE_TAG=${AMAZON_AFFILIATE_TAG:-solarfluidity-20}
       - SCHEDULE_INTERVAL=${SCHEDULE_INTERVAL:-86400}  # Por defecto 24 horas
+      - OLLAMA_HOST=http://ollama:11434
     restart: unless-stopped
+    depends_on:
+      - ollama
 
   # Servicio para ejecutar el scraper bajo demanda
   scraper:
@@ -42,9 +54,13 @@ services:
       - amazon_data:/app/api/data
     environment:
       - AMAZON_AFFILIATE_TAG=${AMAZON_AFFILIATE_TAG:-solarfluidity-20}
+      - OLLAMA_HOST=http://ollama:11434
     restart: "no"  # Solo se inicia manualmente
     profiles:
       - scraper-only
+    depends_on:
+      - ollama
 
 volumes:
   amazon_data:  # Volumen para almacenar datos extraídos de Amazon
+  ollama:  # Volumen para almacenar modelos y datos de Ollama
