@@ -2,35 +2,124 @@
 exports.handler = async (event, context) => {
   try {
     // Process the incoming request
-    const path = event.path.replace(/^\/\.netlify\/functions\/api/, "");
-    const segments = path.split("/").filter(Boolean);
+    const path = event.path.replace(/\.netlify\/functions\/[^/]+/, '');
+    const segments = path.split('/').filter(Boolean);
 
-    // Simple API response for health check
-    if (!segments.length || segments[0] === "health") {
+    // Return a 404 if the path is empty
+    if (!segments.length) {
       return {
-        statusCode: 200,
+        statusCode: 404,
         body: JSON.stringify({
-          status: "ok",
-          message: "SolarFluidity API is up and running",
-          timestamp: new Date().toISOString()
+          message: "Not Found"
         })
       };
     }
+
+    // Obtener datos enviados en el cuerpo del request (para usar con Ollama)
+    let requestData = {};
+    if (event.body && (segments[0] === "ollama")) {
+      try {
+        requestData = JSON.parse(event.body);
+        console.log('Datos recibidos para Ollama:', requestData);
+        // Los datos de requestData se usarían para personalizar respuestas
+        // pero en la simulación usamos respuestas predefinidas
+      } catch (error) {
+        console.error('Error al parsear el cuerpo de la solicitud:', error);
+      }
+    }
     
+    // API endpoint para Ollama
+    if (segments[0] === "ollama") {
+      if (segments.length > 1) {
+        const ollamaEndpoint = segments[1];
+        let response;
+        
+        // Procesar diferentes endpoints de Ollama
+        switch (ollamaEndpoint) {
+          case 'description':
+            response = {
+              success: true,
+              description: 'Este producto de energía solar de alta calidad está diseñado para ofrecer máxima eficiencia y durabilidad. Con una construcción resistente y componentes de primera calidad, es perfecto para cualquier instalación solar residencial o comercial.'
+            };
+            break;
+            
+          case 'features':
+            response = {
+              success: true,
+              features: [
+                'Alta eficiencia energética',
+                'Durabilidad garantizada',
+                'Fácil instalación',
+                'Compatible con sistemas existentes',
+                'Resistente a condiciones climáticas extremas',
+                'Certificación de calidad internacional'
+              ]
+            };
+            break;
+            
+          case 'recommendations':
+            response = {
+              success: true,
+              recommendations: []  // En un caso real, aquí irían productos recomendados
+            };
+            break;
+            
+          case 'health':
+            response = {
+              status: "online",
+              message: "Ollama simulation is running",
+              isActualOllama: false
+            };
+            break;
+            
+          default:
+            return {
+              statusCode: 404,
+              body: JSON.stringify({ error: 'Endpoint de Ollama no encontrado' })
+            };
+        }
+        
+        return {
+          statusCode: 200,
+          headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+          },
+          body: JSON.stringify(response)
+        };
+      }
+      
+      // Si solo se especificó /ollama sin endpoint
+      return {
+        statusCode: 200,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+        },
+        body: JSON.stringify({
+          message: "API de Ollama simulada",
+          endpoints: ["/ollama/description", "/ollama/features", "/ollama/recommendations", "/ollama/health"]
+        })
+      };
+    }
+
     // Example API endpoints
     if (segments[0] === "products") {
+      // Mock products for demonstration
       const products = [
         {
           id: "kit-solar-5kw-residencial",
           name: "Kit Solar 5kW Residencial Completo",
           price: 2499.99,
-          category: "Kits"
+          category: "Kits",
+          amazonAffiliateLink: "https://www.amazon.com/dp/B075QBSYX2?tag=solarfluidity-20"
         },
         {
           id: "panel-solar-monocristalino-400w",
           name: "Panel Solar Monocristalino 400W",
           price: 299.99,
-          category: "Paneles"
+          category: "Paneles",
+          amazonAffiliateLink: "https://www.amazon.com/dp/B09BFRQ1RT?tag=solarfluidity-20"
         }
       ];
       
