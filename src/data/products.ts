@@ -44,6 +44,13 @@ export const categories: Category[] = [
     description: 'Dispositivos para controlar y supervisar el rendimiento de tu sistema solar',
     imageUrl: '/images/categories/monitoreo.jpg',
     slug: 'monitoreo'
+  },
+  {
+    id: 'garmin',
+    name: 'Relojes Garmin',
+    description: 'Relojes inteligentes con tecnología solar para deportistas y amantes de la aventura',
+    imageUrl: '/images/categories/garmin-watches.jpg',
+    slug: 'relojes-garmin'
   }
 ];
 
@@ -347,6 +354,120 @@ export const products: Product[] = [
     isNew: true,
     isFeatured: false,
     slug: 'monitor-energia-wifi'
+  },
+  
+  // Relojes Garmin
+  {
+    id: 'garmin-instinct-2-solar',
+    name: 'Garmin Instinct 2 Solar, GPS Outdoor Watch',
+    description: 'Reloj GPS para exteriores con capacidades de carga solar, soporte multi-GNSS, seguimiento de rutas y múltiples funciones para deportistas y aventureros. La tecnología solar te permite usar tu reloj indefinidamente sin necesidad de cargarlo cuando está expuesto a suficiente luz solar.',
+    price: 399.99,
+    discountPrice: 239.98,
+    categoryId: 'garmin',
+    features: [
+      'Carga por energía solar para duración de batería ilimitada',
+      'GPS de alta precisión con soporte multi-GNSS',
+      'Seguimiento de rutas Tracback',
+      'Resistente al agua hasta 100 metros',
+      'Monitoreo avanzado de salud y entrenamiento',
+      'Compatible con smartphones iOS y Android'
+    ],
+    specifications: {
+      modelo: 'Instinct 2 Solar',
+      color: 'Grafito',
+      tamano_pantalla: '0.9 pulgadas',
+      duracion_bateria: 'Ilimitada con suficiente exposición solar',
+      resistencia_agua: '10 ATM (100 metros)',
+      conectividad: 'Bluetooth, ANT+'
+    },
+    amazonAsin: 'B09NMKGRMZ',
+    amazonAffiliateLink: 'https://amzn.to/4lGYQYc',
+    imageUrl: '/images/products/garmin-instinct-2-solar.jpg',
+    gallery: [
+      '/images/products/garmin-instinct-2-solar-1.jpg',
+      '/images/products/garmin-instinct-2-solar-2.jpg',
+      '/images/products/garmin-instinct-2-solar-3.jpg'
+    ],
+    stock: 15,
+    rating: 4.7,
+    reviews: 1247,
+    isNew: true,
+    isFeatured: true,
+    slug: 'garmin-instinct-2-solar-gps-watch'
+  },
+  {
+    id: 'garmin-fenix-7-solar',
+    name: 'Garmin Fénix 7 Solar, Reloj Multideporte Premium',
+    description: 'Reloj multideporte premium con pantalla táctil, carga solar, mapas a color, música y funciones avanzadas de entrenamiento y navegación. Rendimiento excepcional para atletas y aventureros exigentes.',
+    price: 799.99,
+    discountPrice: 699.99,
+    categoryId: 'garmin',
+    features: [
+      'Pantalla táctil a color con carga solar integrada',
+      'Mapas TopoActive preinstalados a todo color',
+      'Hasta 22 días de duración de batería en modo reloj con solar',
+      'Sensores ABC: altímetro, barómetro y brújula',
+      'Almacenamiento de música y pagos sin contacto Garmin Pay',
+      'Monitorización avanzada de rendimiento y recuperación'
+    ],
+    specifications: {
+      modelo: 'Fénix 7 Solar',
+      color: 'Plata/Negro',
+      tamano_pantalla: '1.3 pulgadas',
+      duracion_bateria: 'Hasta 22 días con solar',
+      resistencia_agua: '10 ATM (100 metros)',
+      conectividad: 'Bluetooth, ANT+, WiFi'
+    },
+    amazonAsin: 'B09NMG12HY',
+    amazonAffiliateLink: 'https://amzn.to/4lGYQYc',
+    imageUrl: '/images/products/garmin-fenix-7-solar.jpg',
+    gallery: [
+      '/images/products/garmin-fenix-7-solar-1.jpg',
+      '/images/products/garmin-fenix-7-solar-2.jpg'
+    ],
+    stock: 8,
+    rating: 4.9,
+    reviews: 856,
+    isNew: true,
+    isFeatured: true,
+    slug: 'garmin-fenix-7-solar-reloj-multideporte'
+  },
+  {
+    id: 'garmin-enduro-2',
+    name: 'Garmin Enduro 2, Reloj Ultra Resistencia con Solar',
+    description: 'Reloj de ultra resistencia con carga solar, diseñado para atletas de resistencia extrema que buscan un rendimiento sin compromisos en carreras y aventuras de larga duración.',
+    price: 999.99,
+    discountPrice: null,
+    categoryId: 'garmin',
+    features: [
+      'Batería de hasta 150 horas en modo GPS con carga solar',
+      'Linterna LED integrada con modos de alta y baja intensidad',
+      'Carcasa de titanio ultraligera con cristal Power Sapphire',
+      'Mapas TopoActive a color con navegación giro a giro',
+      'Métricas avanzadas para corredores de trail y ultramaratón',
+      'SatIQ para optimizar consumo de batería y precisión GPS'
+    ],
+    specifications: {
+      modelo: 'Enduro 2',
+      color: 'Titanio/Gris',
+      tamano_pantalla: '1.4 pulgadas',
+      duracion_bateria: 'Hasta 150 horas en GPS con solar',
+      resistencia_agua: '10 ATM (100 metros)',
+      peso: '70 gramos'
+    },
+    amazonAsin: 'B0B6G3LXRG',
+    amazonAffiliateLink: 'https://amzn.to/4lGYQYc',
+    imageUrl: '/images/products/garmin-enduro-2.jpg',
+    gallery: [
+      '/images/products/garmin-enduro-2-1.jpg',
+      '/images/products/garmin-enduro-2-2.jpg'
+    ],
+    stock: 5,
+    rating: 4.8,
+    reviews: 423,
+    isNew: false,
+    isFeatured: true,
+    slug: 'garmin-enduro-2-reloj-ultra-resistencia'
   }
 ];
 
