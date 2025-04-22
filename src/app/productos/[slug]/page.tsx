@@ -147,30 +147,37 @@ export default function ProductDetailPage(props: Props) {
             <p className="text-gray-700">{product.description}</p>
           </div>
           
-          {/* Product actions - con botón de afiliado de Amazon */}
+          {/* Product actions - Siempre muestra enlace de Amazon como primera opción */}
           <div className="flex flex-col gap-4 mb-8">
-            {product.amazonAffiliateLink ? (
-              <a 
-                href={product.amazonAffiliateLink} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black py-3 px-8 rounded-lg flex-1 flex items-center justify-center font-bold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="mr-2" fill="currentColor">
+            <a 
+              href={product.amazonAffiliateLink || `https://www.amazon.com/s?k=${encodeURIComponent(product.name)}&tag=solarfluidity-20`} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-white py-4 px-8 rounded-xl flex items-center justify-center font-bold text-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 relative overflow-hidden group"
+            >
+              <span className="absolute inset-0 bg-gradient-to-r from-amber-600 to-yellow-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span className="relative flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" className="mr-3" fill="currentColor">
                   <path d="M15.397 13.167c-.498.29-.998.776-1.498.776-.997 0-1.498-1.064-2.498-1.064-.799 0-1.199.968-2.099.968-1.398 0-2.097-2.129-2.996-4.453.8-1.842 1.499-2.904 2.597-2.904.8 0 1.199.775 2.199.775.997 0 1.598-.775 2.497-.775 1.3 0 2.098 1.064 2.997 3.227-1.797.484-2.497 1.259-1.199 3.45zm-3.497-7.138c-.398-.193-.898-.387-1.498-.387-2.996 0-5.293 2.904-5.992 6.421-.699 3.519.698 6.423 3.794 6.423.6 0 1.099-.194 1.699-.387-.2.193-.4.581-.4 1.163 0 .775.499 1.55 1.299 1.55.399 0 .699-.194.998-.775-1.198-.97-1.098-1.744-.599-3.488-.2.193-.599.387-.898.387-1.299 0-1.699-1.938-1.199-4.26.499-2.323 1.498-4.26 2.796-4.26.3 0 .699.193.899.387-.2-1.742-.4-2.129-1.09-2.323.47-.582.869-.97 1.399-.97.698 0 1.198.581 1.198 1.161 0 .582-.2.97-.399 1.357z"/>
                 </svg>
-                Ver en Amazon
-              </a>
-            ) : (
-              <button 
-                className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-lg flex-1 flex items-center justify-center font-bold shadow-md transition-colors"
-                disabled={product.stock <= 0}
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-                {product.stock > 0 ? 'Añadir al carrito' : 'Agotado'}
-              </button>
+                <span>
+                  {product.amazonAsin ? 'Ver Oferta en Amazon' : 'Buscar en Amazon'}
+                  {product.discountPrice && (
+                    <span className="ml-2 text-sm inline-block bg-white text-amber-600 px-2 py-0.5 rounded-full">¡OFERTA!</span>
+                  )}
+                </span>
+              </span>
+            </a>
+            
+            {product.stock > 0 && (
+              <div className="mt-2 text-center">
+                <span className="text-sm text-green-600 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Disponible para envío inmediato
+                </span>
+              </div>
             )}
             
             <button className="border border-gray-300 hover:border-gray-400 bg-white text-gray-700 hover:text-gray-900 py-3 px-6 rounded-lg flex items-center justify-center transition-colors">

@@ -72,6 +72,8 @@ export const products: Product[] = [
       peso: '19.5 kg',
       dimensiones: '1755 x 1038 x 35 mm'
     },
+    amazonAsin: 'B08G1LBLWB',
+    amazonAffiliateLink: 'https://www.amazon.com/dp/B08G1LBLWB?tag=solarfluidity-20',
     imageUrl: '/images/products/panel-mono-400w.jpg',
     gallery: [
       '/images/products/panel-mono-400w-1.jpg',
@@ -107,6 +109,8 @@ export const products: Product[] = [
       peso: '23 kg',
       dimensiones: '2115 x 1052 x 35 mm'
     },
+    amazonAsin: 'B092R7VFC5',
+    amazonAffiliateLink: 'https://www.amazon.com/dp/B092R7VFC5?tag=solarfluidity-20',
     imageUrl: '/images/products/panel-mono-500w.jpg',
     gallery: [
       '/images/products/panel-mono-500w-1.jpg',
@@ -132,17 +136,19 @@ export const products: Product[] = [
       'Capacidad: 200Ah',
       'Voltaje: 48V',
       'Química: Litio-ion',
-      'Ciclos de vida: >4000 (80% DoD)',
+      'Ciclos de vida: >4000 ciclos',
       'BMS integrado',
       'Garantía: 10 años'
     ],
     specifications: {
       capacidad: '200Ah',
       voltaje: '48V',
-      quimica: 'Litio-ion LFP',
-      peso: '54 kg',
-      dimensiones: '584 x 330 x 218 mm'
+      quimica: 'Litio-ion',
+      peso: '45 kg',
+      dimensiones: '650 x 350 x 180 mm'
     },
+    amazonAsin: 'B08T6DM3QH',
+    amazonAffiliateLink: 'https://www.amazon.com/dp/B08T6DM3QH?tag=solarfluidity-20',
     imageUrl: '/images/products/bateria-litio-48v-200ah.jpg',
     gallery: [
       '/images/products/bateria-litio-48v-200ah-1.jpg',
@@ -166,17 +172,19 @@ export const products: Product[] = [
       'Capacidad: 150Ah',
       'Voltaje: 12V',
       'Química: AGM (Plomo-ácido)',
-      'Ciclos de vida: >800 (50% DoD)',
+      'Ciclos de vida: >500 ciclos',
       'Libre de mantenimiento',
       'Garantía: 2 años'
     ],
     specifications: {
       capacidad: '150Ah',
       voltaje: '12V',
-      quimica: 'AGM',
-      peso: '42 kg',
-      dimensiones: '483 x 170 x 240 mm'
+      quimica: 'AGM (Plomo-ácido)',
+      peso: '38 kg',
+      dimensiones: '485 x 170 x 240 mm'
     },
+    amazonAsin: 'B07RRLF7ZY',
+    amazonAffiliateLink: 'https://www.amazon.com/dp/B07RRLF7ZY?tag=solarfluidity-20',
     imageUrl: '/images/products/bateria-agm-12v-150ah.jpg',
     gallery: [
       '/images/products/bateria-agm-12v-150ah-1.jpg',
@@ -202,17 +210,19 @@ export const products: Product[] = [
       'Potencia: 3kW',
       'Voltaje de batería: 48V',
       'MPPT integrado',
-      'Conexión a red y fuera de red',
-      'WiFi para monitoreo',
+      'Compatible con red eléctrica',
+      'Monitoreo WiFi',
       'Garantía: 5 años'
     ],
     specifications: {
       potencia: '3kW',
-      voltajeBateria: '48V',
-      voltajeSalida: '120V/240V',
+      voltaje_bateria: '48V',
+      eficiencia: '>97%',
       peso: '18 kg',
-      dimensiones: '480 x 380 x 150 mm'
+      dimensiones: '460 x 340 x 120 mm'
     },
+    amazonAsin: 'B07ZY1YNLD',
+    amazonAffiliateLink: 'https://www.amazon.com/dp/B07ZY1YNLD?tag=solarfluidity-20',
     imageUrl: '/images/products/inversor-hibrido-3kw.jpg',
     gallery: [
       '/images/products/inversor-hibrido-3kw-1.jpg',
@@ -249,6 +259,8 @@ export const products: Product[] = [
       inversor: '5kW híbrido',
       garantia: '5 años sistema completo'
     },
+    amazonAsin: 'B09B495SCG',
+    amazonAffiliateLink: 'https://www.amazon.com/dp/B09B495SCG?tag=solarfluidity-20',
     imageUrl: '/images/products/kit-solar-5kw.jpg',
     gallery: [
       '/images/products/kit-solar-5kw-1.jpg',
@@ -285,6 +297,8 @@ export const products: Product[] = [
       anguloAjuste: '5-30 grados',
       peso: '12 kg'
     },
+    amazonAsin: 'B07ZQWJRHL',
+    amazonAffiliateLink: 'https://www.amazon.com/dp/B07ZQWJRHL?tag=solarfluidity-20',
     imageUrl: '/images/products/montaje-techo-plano.jpg',
     gallery: [
       '/images/products/montaje-techo-plano-1.jpg',
@@ -320,6 +334,8 @@ export const products: Product[] = [
       consumo: '<2W',
       dimensiones: '120 x 80 x 30 mm'
     },
+    amazonAsin: 'B07FPNBF9C',
+    amazonAffiliateLink: 'https://www.amazon.com/dp/B07FPNBF9C?tag=solarfluidity-20',
     imageUrl: '/images/products/monitor-energia-wifi.jpg',
     gallery: [
       '/images/products/monitor-energia-wifi-1.jpg',

@@ -3,12 +3,13 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import ThemeSwitch from './ThemeSwitch';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gradient-to-r from-blue-900 via-indigo-800 to-blue-900 text-white border-b border-blue-500/30 backdrop-blur-sm sticky top-0 z-50">
+    <header className="bg-gradient-to-r from-blue-900 via-indigo-800 to-blue-900 dark:bg-gradient-to-r dark:from-gray-900 dark:via-slate-900 dark:to-gray-900 text-white border-b border-blue-500/30 dark:border-slate-800/80 backdrop-blur-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2 group">
           <div className="relative w-10 h-10 group-hover:scale-105 transition-transform duration-300">
@@ -48,6 +49,11 @@ export default function Header() {
         </nav>
         
         <div className="flex items-center gap-3">
+          {/* Theme Switch */}
+          <div className="p-1 bg-blue-800/30 rounded-full backdrop-blur-sm">
+            <ThemeSwitch />
+          </div>
+          
           <Link 
             href="/contacto" 
             className="hidden md:flex bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-medium py-1.5 px-4 rounded-full text-sm shadow-lg shadow-blue-900/20 transition-all duration-300 items-center gap-2"
