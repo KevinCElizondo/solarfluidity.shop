@@ -1,16 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Definir configuración para solucionar problemas de Netlify
-  experimental: {
-    appDir: true
-  },
+  // Configuración optimizada para Cloudflare Workers
+  output: 'standalone',
   // Asegurarse de usar la estructura de carpetas correcta
   distDir: '.next',
+  // Configurar para cargar imágenes desde dominios externos (necesario para imágenes de Amazon)
+  images: {
+    domains: ['m.media-amazon.com', 'images-na.ssl-images-amazon.com'],
+    unoptimized: true
+  },
   typescript: {
-    // !! ADVERTENCIA !!
     // Ignorar errores de tipo durante la producción
-    // para evitar que la compilación falle en Netlify
     ignoreBuildErrors: true,
   },
   eslint: {
