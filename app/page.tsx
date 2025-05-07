@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { categories, getFeaturedProducts, getNewProducts } from "../data/products";
-import { Product, Category } from "../types/product";
+import { categories, getFeaturedProducts, getNewProducts } from "./src/data/products";
+import { Product, Category } from "./src/types/product";
 
 // Product Card Component - Diseño innovador con estilo tecnológico
 const ProductCard = ({ product }: { product: Product }) => {

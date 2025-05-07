@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Definir configuración para solucionar problemas de Netlify
+  experimental: {
+    appDir: true
+  },
+  // Asegurarse de usar la estructura de carpetas correcta
+  distDir: '.next',
   typescript: {
     // !! ADVERTENCIA !!
     // Ignorar errores de tipo durante la producción
