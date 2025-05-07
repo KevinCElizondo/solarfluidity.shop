@@ -1,5 +1,5 @@
-// Importación de tipos
-import { Product, Category } from '../src/types/product';
+// Archivo alternativo para productos - extremadamente simplificado
+import { Product, Category } from '../types/product';
 
 // Categorías - mínimas
 export const categories: Category[] = [
