@@ -1,0 +1,2 @@
+# Cloudflare build overrides
+BUILD_COMMAND=bash ./build.sh
