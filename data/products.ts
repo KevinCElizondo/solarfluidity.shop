@@ -259,12 +259,12 @@ export const products: Product[] = [
       'Cables y protecciones',
       'Guía de instalación'
     ],
-    specifications: {
-      potenciaTotal: '5kW',
-      almacenamiento: '9.6kWh',
-      paneles: '12 x 400W',
-      inversor: '5kW híbrido',
-      garantia: '5 años sistema completo'
+    specifications: { 
+      "potenciaTotal": "5kW", 
+      "almacenamiento": "9.6kWh", 
+      "paneles": "12 x 400W", 
+      "inversor": "5kW híbrido", 
+      "garantia": "5 años sistema completo" 
     },
     amazonAsin: 'B09B495SCG',
     amazonAffiliateLink: 'https://www.amazon.com/dp/B09B495SCG?tag=solarfluidity-20',
