@@ -5,11 +5,12 @@ import Link from 'next/link';
 import { ArrowLeftIcon, CheckCircleIcon, ShoppingCartIcon, SparklesIcon } from '@heroicons/react/24/solid';
 import { Metadata } from 'next';
 
-type Props = {
+interface PageProps {
   params: { slug: string };
-};
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Pick<PageProps, 'params'>): Promise<Metadata> {
   const product = getProductBySlug(params.slug);
   if (!product) {
     return {
@@ -41,7 +42,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
+export default function ProductPage({ params }: PageProps) {
   const product = getProductBySlug(params.slug);
 
   if (!product) {

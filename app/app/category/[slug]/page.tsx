@@ -5,11 +5,12 @@ import Image from 'next/image';
 import { ArrowLeftIcon, SparklesIcon } from '@heroicons/react/24/solid';
 import { Metadata } from 'next';
 
-type Props = {
+interface PageProps {
   params: { slug: string };
-};
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Pick<PageProps, 'params'>): Promise<Metadata> {
   const category = getCategoryBySlug(params.slug);
   if (!category) {
     return {
@@ -96,7 +97,7 @@ const ProductCard = ({ product }: { product: Product }) => (
     </div>
   );
 
-export default function CategoryPage({ params }: { params: { slug: string } }) {
+export default function CategoryPage({ params }: PageProps) {
   const category = getCategoryBySlug(params.slug);
   
   if (!category) {
