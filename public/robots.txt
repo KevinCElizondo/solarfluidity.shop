@@ -1,0 +1,11 @@
+# Configuración de robots.txt para SolarFluidity.shop
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://solarfluidity.shop/sitemap.xml
+
+# Rutas a excluir
+Disallow: /api/
+Disallow: /.netlify/
+Disallow: /_next/

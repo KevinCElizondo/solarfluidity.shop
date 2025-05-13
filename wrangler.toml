@@ -1,0 +1,23 @@
+[build]
+command = "npm run build"
+publish = ".next"
+
+# Configuración de Wrangler para SolarFluidity Shop
+name = "solarfluidity-shop"
+main = ".next/standalone/server.js"
+compatibility_date = "2023-06-28"
+compatibility_flags = ["nodejs_compat"]
+
+[site]
+bucket = ".next/static"
+
+[env.production]
+routes = [{pattern = "solarfluidity.shop", custom_domain = true}]
+zone_id = "" # Reemplazar con tu Zone ID si lo tienes
+
+[observability.logs]
+enabled = true
+
+# Configuración de variables de entorno
+[vars]
+NODE_ENV = "production"

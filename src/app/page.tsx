@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { categories, getFeaturedProducts, getNewProducts } from "../data/products";
+import { categories, getFeaturedProducts, getNewProducts } from "../lib/product-data";
 import { Product, Category } from "../types/product";
 
 // Product Card Component - Diseño innovador con estilo tecnológico

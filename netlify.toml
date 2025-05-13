@@ -1,13 +1,14 @@
 [build]
-  command = "npm install && NEXT_TELEMETRY_DISABLED=1 npx --yes next build"
+  command = "npm install && NEXT_TELEMETRY_DISABLED=1 npx next build"
   publish = ".next"
   
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
   NPM_FLAGS = "--legacy-peer-deps --omit=optional"
   NEXT_TELEMETRY_DISABLED = "1"
-  # Variable para indicar que estamos en despliegue (para manejar Ollama adecuadamente)
   IS_NETLIFY_DEPLOYMENT = "true"
+  NEXT_PUBLIC_SITE_URL = "https://solarfluidity.shop"
+  NETLIFY_USE_YARN = "false"
 
 [dev]
   command = "npm run dev"
@@ -17,12 +18,32 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    enable_edge_functions = true
+    experimental_trace = true
 
-# La siguiente redirección no es necesaria para Next.js ya que el plugin se encarga de eso
-# [[redirects]]
-#   from = "/*"
-#   to = "/index.html"
-#   status = 200
+# Redirecciones adicionales para mejorar SEO y experiencia de usuario
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/python-api/*"
+  to = "/.netlify/functions/python-api/:splat"
+  status = 200
+
+# Redirección para páginas no encontradas
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# Redirección para preservar URLs antiguas
+[[redirects]]
+  from = "/categorias/*"
+  to = "/categorias/:splat"
+  status = 301
 
 [functions]
   directory = "netlify/functions"
