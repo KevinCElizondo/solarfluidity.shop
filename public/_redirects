@@ -1,5 +1,7 @@
-# Redireccionamientos para SPA
-/* /index.html 200
-
-# Redireccionamiento de API
+# Redirecciones para APIs
+/api/health /.netlify/functions/api/health 200
+/api/products /.netlify/functions/api/products 200
 /api/* /.netlify/functions/api/:splat 200
+
+# Redirección para páginas SPA
+/* /index.html 200

@@ -22,7 +22,7 @@ exports.handler = async (event) => {
     const path = event.path.replace(/\.netlify\/functions\/python-api/, '');
     
     // Simulación de respuesta para productos solares
-    if (path.startsWith('/api/products')) {
+    if (path === '/api/products' || path === '/products') {
       const products = [
         {
           id: "kit-solar-5kw",
@@ -30,7 +30,9 @@ exports.handler = async (event) => {
           price: 2499.99,
           description: "Kit completo para energía solar residencial",
           rating: 4.9,
-          stock: 10
+          stock: 10,
+          categoryId: "kits",
+          imageUrl: "https://m.media-amazon.com/images/I/71dKmKpILdL._AC_SL1500_.jpg"
         },
         {
           id: "panel-solar-400w",
@@ -38,7 +40,19 @@ exports.handler = async (event) => {
           price: 299.99,
           description: "Panel solar de alta eficiencia",
           rating: 4.8,
-          stock: 25
+          stock: 25,
+          categoryId: "paneles",
+          imageUrl: "https://m.media-amazon.com/images/I/61G+s3YPDeL._AC_SL1200_.jpg"
+        },
+        {
+          id: "inversor-2000w",
+          name: "Inversor Solar 2000W",
+          price: 599.99,
+          description: "Inversor solar híbrido con MPPT integrado",
+          rating: 4.7,
+          stock: 15,
+          categoryId: "inversores",
+          imageUrl: "https://m.media-amazon.com/images/I/71zyFI0A1CL._AC_SL1500_.jpg"
         }
       ];
       
@@ -50,7 +64,7 @@ exports.handler = async (event) => {
     }
     
     // Endpoint de salud
-    if (path === '/api/health' || path === '/') {
+    if (path === '/api/health' || path === '/health' || path === '/') {
       return {
         statusCode: 200,
         headers,
@@ -58,7 +72,9 @@ exports.handler = async (event) => {
           status: "operational",
           api: "SolarFluidity API (Serverless)",
           version: "1.0.0",
-          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString(),
+          environment: process.env.NODE_ENV || "production",
+          service: "SolarFluidity.shop"
         })
       };
     }

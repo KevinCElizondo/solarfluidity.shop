@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   // Configuración optimizada para Netlify
-  output: 'export',
+  output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
   // Asegurarse de usar la estructura de carpetas correcta
   distDir: '.next',
   // Habilitar imágenes optimizadas para Netlify
