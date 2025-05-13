@@ -2,6 +2,9 @@
   command = "npm install && NEXT_TELEMETRY_DISABLED=1 npx next build"
   publish = ".next"
   
+  # Mejorar la configuración para una correcta renderización del lado del cliente
+  ignore = "git diff --quiet HEAD^ HEAD ."
+  
 [build.environment]
   NODE_VERSION = "20"
   NPM_FLAGS = "--legacy-peer-deps --omit=optional"
