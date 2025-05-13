@@ -1,9 +1,25 @@
 import "./globals.css";
 
+// Importar fuentes desde next/font/google
+import { Inter, Roboto_Mono } from "next/font/google";
+
 // Import Header and Footer components
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+
+// Configurar fuentes
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const robotoMono = Roboto_Mono({
+  subsets: ['latin'],
+  variable: '--font-roboto-mono',
+  display: 'swap',
+});
 
 export const metadata = {
   title: "SolarFluidity.shop - Soluciones de Energía Solar",
@@ -19,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body
-        className="antialiased min-h-screen flex flex-col font-sans"
+        className={`${inter.variable} ${robotoMono.variable} antialiased min-h-screen flex flex-col font-sans`}
       >
         <ThemeProvider>
           <Header />
