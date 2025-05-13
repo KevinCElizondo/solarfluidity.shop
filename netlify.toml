@@ -18,9 +18,6 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-  [plugins.inputs]
-    enable_edge_functions = true
-    experimental_trace = true
 
 # Redirecciones adicionales para mejorar SEO y experiencia de usuario
 [[redirects]]
