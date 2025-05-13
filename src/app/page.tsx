@@ -164,64 +164,146 @@ export default function Home() {
   
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section - Futurista y Tecnológico */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-violet-900 dark:from-gray-900 dark:via-slate-900 dark:to-indigo-950 py-24 md:py-32 overflow-hidden">
-        {/* Patrones geométricos animados */}
+      {/* Hero Section Mejorado - Estilo Premium y Moderno */}
+      <section className="relative bg-gradient-to-br from-blue-950 via-indigo-900 to-blue-800 dark:from-black dark:via-slate-950 dark:to-indigo-950 py-28 md:py-40 overflow-hidden">
+        {/* Efectos visuales avanzados */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute h-40 w-40 border border-blue-500/20 rounded-full top-1/4 -left-10 animate-pulse"></div>
-            <div className="absolute h-60 w-60 border border-indigo-500/20 rounded-full bottom-1/3 right-10 animate-pulse animation-delay-700"></div>
-            <div className="absolute h-20 w-20 border border-cyan-500/30 rounded-full top-1/3 right-1/4 animate-pulse animation-delay-1000"></div>
-            <div className="absolute top-1/4 left-1/2 w-72 h-72 bg-gradient-to-br from-blue-600/10 to-cyan-400/5 rounded-full filter blur-3xl animate-blob"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gradient-to-br from-indigo-600/10 to-purple-400/5 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
+            {/* Formas geométricas 3D animadas */}
+            <div className="absolute h-96 w-96 border-4 border-blue-500/10 rounded-full -top-20 -left-20 animate-slow-spin"></div>
+            <div className="absolute h-80 w-80 border border-cyan-400/20 rounded-full top-40 -right-10 animate-reverse-spin"></div>
+            <div className="absolute h-40 w-40 border-2 border-indigo-500/30 rounded-full bottom-20 left-1/4 animate-pulse animation-delay-700"></div>
+            <div className="absolute h-60 w-60 border-2 border-blue-400/20 rounded-3xl rotate-45 top-1/4 right-1/3 animate-float"></div>
             
-            {/* Líneas de cuadrícula */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(to_right,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+            {/* Efectos de luz */}
+            <div className="absolute top-10 left-1/3 w-96 h-96 bg-gradient-to-br from-blue-500/20 to-cyan-400/10 rounded-full filter blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-0 right-0 w-[40rem] h-[40rem] bg-gradient-to-tl from-indigo-600/20 to-purple-400/5 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
+            <div className="absolute top-1/2 left-0 w-[30rem] h-[30rem] bg-gradient-to-tr from-blue-400/10 to-cyan-300/10 rounded-full filter blur-3xl animate-blob animation-delay-4000"></div>
+            
+            {/* Líneas de cuadrícula mejoradas */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.08)_0%,transparent_25%)] bg-[size:32px_32px]"></div>
           </div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <div className="inline-flex items-center justify-center py-1 px-3 mb-6 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse mr-2"></span>
-              <span className="text-cyan-300 text-sm font-medium">Tecnología de vanguardia</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-white to-blue-300">
-              Transforma Tu Hogar Con <br />
-              <span className="text-white">Energía Solar Inteligente</span>
-            </h1>
-            
-            <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-              Descubre productos solares de alta eficiencia respaldados por tecnología innovadora para un futuro más sostenible.  
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-5 justify-center">
-              <Link 
-                href="/productos" 
-                className="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-4 px-8 rounded-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
-              >
-                <span className="absolute top-0 left-0 w-full h-full bg-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></span>
-                <span className="relative flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-                  </svg>
-                  Explorar Productos
-                </span>
-              </Link>
+          <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div className="lg:w-1/2 text-left">
+              <div className="inline-flex items-center justify-center py-1.5 px-4 mb-6 rounded-full bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-md border border-white/10">
+                <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse mr-2.5"></span>
+                <span className="text-cyan-300 text-sm font-medium tracking-wide">SOLARFLUIDITY • TECNOLOGÍA PREMIUM</span>
+              </div>
               
-              <Link 
-                href="/categorias" 
-                className="group relative overflow-hidden bg-white/10 backdrop-blur-sm border border-white/30 text-white hover:text-cyan-300 py-4 px-8 rounded-xl font-bold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
-              >
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></span>
-                <span className="relative flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                  </svg>
-                  Ver Categorías
-                </span>
-              </Link>
+              <h1 className="text-5xl md:text-7xl font-extrabold mb-8 leading-tight">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-white to-blue-300">Transforma Tu Hogar</span>
+                <br />
+                <span className="text-white">Con Energía Solar</span>
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Inteligente</span>
+              </h1>
+              
+              <p className="text-xl text-blue-100 mb-10 max-w-2xl lg:pr-10">
+                Descubre productos solares de <span className="text-cyan-300 font-medium">alta eficiencia</span> respaldados por tecnología innovadora para un futuro más sostenible y rentable.  
+              </p>
+            
+              <div className="flex flex-col sm:flex-row gap-5">
+                <Link 
+                  href="/productos" 
+                  className="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-4 px-8 rounded-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+                >
+                  <span className="absolute top-0 left-0 w-full h-full bg-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></span>
+                  <span className="relative flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                    </svg>
+                    Explorar Productos
+                  </span>
+                </Link>
+                
+                <Link 
+                  href="/categorias" 
+                  className="group relative overflow-hidden bg-white/10 backdrop-blur-sm border border-white/30 text-white hover:text-cyan-300 py-4 px-8 rounded-xl font-bold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></span>
+                  <span className="relative flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                    </svg>
+                    Ver Categorías
+                  </span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Imagen del panel solar con efectos premium */}
+            <div className="lg:w-1/2 relative">
+              <div className="relative w-full h-[500px] transform rotate-1 hover:rotate-0 transition-transform duration-700">
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-cyan-400/30 rounded-2xl -rotate-3 transform hover:scale-105 transition-transform duration-500 blur-xl opacity-50"></div>
+                <div className="absolute inset-0 border-2 border-cyan-400/30 rounded-2xl rotate-6 transform hover:-rotate-2 transition-transform duration-500"></div>
+                
+                {/* Marco principal de la imagen */}
+                <div className="relative h-full w-full overflow-hidden rounded-2xl border border-white/20 shadow-2xl bg-gradient-to-br from-blue-900/90 to-indigo-900/80 backdrop-blur-sm transform hover:scale-[1.01] transition-all duration-500">
+                  {/* Imagen del panel solar */}
+                  <div className="absolute inset-0 flex items-center justify-center p-4">
+                    <div className="relative w-full h-full">
+                      <Image
+                        src="https://m.media-amazon.com/images/I/71dKmKpILdL._AC_SL1500_.jpg"
+                        alt="Kit Solar Premium"
+                        fill
+                        className="object-contain p-4 z-10 transform hover:scale-105 transition-transform duration-700"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    </div>
+                  </div>
+                  
+                  {/* Efectos decorativos */}
+                  <div className="absolute bottom-4 left-4 right-4 bg-white/5 backdrop-blur-md p-4 rounded-xl border border-white/10 z-20">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="text-xs text-cyan-300 font-medium mb-1">DESTACADO</div>
+                        <div className="text-lg font-bold text-white">Kit Solar 5kW Premium</div>
+                      </div>
+                      <div className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-3 py-1.5 rounded-lg font-bold text-lg">$2,499</div>
+                    </div>
+                    
+                    <div className="mt-2 flex items-center justify-between">
+                      <div className="flex items-center">
+                        <div className="flex">
+                          {[...Array(5)].map((_, i) => (
+                            <svg
+                              key={i}
+                              className="w-4 h-4 text-amber-400"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <span className="text-xs text-gray-300 ml-1">(128 reviews)</span>
+                      </div>
+                      <div className="text-xs text-green-400 flex items-center">
+                        <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse mr-1"></span> 
+                        En Stock 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Elemento decorativo con tecnología */}
+              <div className="absolute -bottom-5 -right-5 bg-gradient-to-br from-blue-600/10 to-indigo-600/10 backdrop-blur-md p-3 rounded-xl border border-white/10 transform rotate-3 shadow-lg">
+                <div className="flex items-center gap-2">
+                  <div className="relative w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                    </svg>
+                  </div>
+                  <div className="text-white">
+                    <div className="text-xs font-medium">Tecnología</div>
+                    <div className="text-sm font-bold">Monitoreo inteligente</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           
