@@ -1,23 +1,15 @@
 import "./globals.css";
 
 // Importar fuentes desde next/font/google
-import { Inter, Roboto_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 
 // Import Header and Footer components
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
-// Configurar fuentes
 const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-});
-
-const robotoMono = Roboto_Mono({
-  subsets: ['latin'],
-  variable: '--font-roboto-mono',
   display: 'swap',
 });
 
@@ -29,20 +21,20 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="es" suppressHydrationWarning>
-      <body
-        className={`${inter.variable} ${robotoMono.variable} antialiased min-h-screen flex flex-col font-sans`}
-      >
+    <html lang="es" className="scroll-smooth">
+      <body className={`${inter.className} bg-[#060d24] text-white antialiased min-h-screen flex flex-col`}>
         <ThemeProvider>
-          <Header />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
+          <div className="mx-auto w-full max-w-screen-2xl">
+            <Header />
+            <main className="flex-grow">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
