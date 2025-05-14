@@ -49,6 +49,7 @@ export default function Header() {
             { href: "/", label: "Inicio" },
             { href: "/categorias", label: "Categorías" },
             { href: "/productos", label: "Productos" },
+            { href: "/relojes-garmin", label: "Relojes Garmin" },
             { href: "/blog", label: "Blog" },
             { href: "/sobre-nosotros", label: "Sobre Nosotros" },
             { href: "/contacto", label: "Contacto" }
@@ -104,6 +105,7 @@ export default function Header() {
                 { href: "/", label: "Inicio" },
                 { href: "/categorias", label: "Categorías" },
                 { href: "/productos", label: "Productos" },
+                { href: "/relojes-garmin", label: "Relojes Garmin" },
                 { href: "/blog", label: "Blog" },
                 { href: "/sobre-nosotros", label: "Sobre Nosotros" },
                 { href: "/contacto", label: "Contacto" }

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#111827" />
+  <!-- Reloj base -->
+  <circle cx="400" cy="400" r="180" fill="#1e293b" stroke="#4ade80" stroke-width="6" />
+  <circle cx="400" cy="400" r="160" fill="#0f172a" stroke="#334155" stroke-width="4" />
+  
+  <!-- Panel solar -->
+  <circle cx="400" cy="400" r="155" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="2,4" />
+  
+  <!-- Pantalla del reloj AMOLED -->
+  <rect x="340" y="310" width="120" height="180" rx="60" ry="60" fill="#0f172a" stroke="#4ade80" stroke-width="2" />
+  
+  <!-- Elementos de la pantalla - Forerunner estilo -->
+  <circle cx="400" cy="350" r="15" fill="#4ade80" opacity="0.7" />
+  <path d="M385 380 L415 380 L405 400 L395 400 Z" fill="#4ade80" opacity="0.6" />
+  
+  <!-- Datos de carrera -->
+  <text x="400" y="430" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" text-anchor="middle">7:30</text>
+  <text x="400" y="450" fill="#ffffff" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">MIN/KM</text>
+  
+  <!-- Métricas de entrenamiento -->
+  <line x1="360" y1="470" x2="380" y2="470" stroke="#4ade80" stroke-width="2" />
+  <line x1="360" y1="480" x2="370" y2="480" stroke="#4ade80" stroke-width="2" />
+  <line x1="360" y1="460" x2="390" y2="460" stroke="#4ade80" stroke-width="2" />
+  
+  <line x1="420" y1="470" x2="440" y2="470" stroke="#3b82f6" stroke-width="2" />
+  <line x1="430" y1="480" x2="440" y2="480" stroke="#3b82f6" stroke-width="2" />
+  <line x1="410" y1="460" x2="440" y2="460" stroke="#3b82f6" stroke-width="2" />
+  
+  <!-- Botones laterales -->
+  <circle cx="470" cy="360" r="6" fill="#475569" stroke="#4ade80" stroke-width="1" />
+  <circle cx="470" cy="400" r="6" fill="#475569" stroke="#4ade80" stroke-width="1" />
+  <circle cx="470" cy="440" r="6" fill="#475569" stroke="#4ade80" stroke-width="1" />
+  
+  <!-- Correa superior -->
+  <path d="M 360,220 Q 400,190 440,220 L 440,310 C 440,310 400,270 360,310 Z" fill="#334155" stroke="#475569" stroke-width="2" />
+  
+  <!-- Correa inferior -->
+  <path d="M 360,490 Q 400,520 440,490 L 440,400 C 440,400 400,440 360,400 Z" fill="#334155" stroke="#475569" stroke-width="2" />
+  
+  <!-- Marcador FORERUNNER 965 -->
+  <text x="400" y="540" fill="#4ade80" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold">FORERUNNER 965</text>
+  <text x="400" y="260" fill="#4ade80" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" font-weight="bold">GARMIN</text>
+  
+  <!-- Símbolos de corredor -->
+  <path d="M 380,280 L 388,280 L 385,290 L 390,293 L 385,310 L 375,300 L 380,295 Z" fill="#4ade80" opacity="0.8" />
+  <path d="M 420,280 L 412,280 L 415,290 L 410,293 L 415,310 L 425,300 L 420,295 Z" fill="#4ade80" opacity="0.8" />
+  
+  <!-- AMOLED indicator -->
+  <text x="400" y="570" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">AMOLED DISPLAY • RUNNING METRICS</text>
+</svg>

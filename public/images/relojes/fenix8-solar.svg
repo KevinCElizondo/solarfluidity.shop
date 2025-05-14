@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#111827" />
+  <!-- Reloj base -->
+  <circle cx="400" cy="400" r="180" fill="#1e293b" stroke="#334155" stroke-width="8" />
+  <circle cx="400" cy="400" r="160" fill="#0f172a" stroke="#1e293b" stroke-width="4" />
+  
+  <!-- Panel solar -->
+  <circle cx="400" cy="400" r="155" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="4,8" />
+  
+  <!-- Pantalla del reloj -->
+  <rect x="330" y="310" width="140" height="180" rx="10" ry="10" fill="#0f172a" stroke="#334155" stroke-width="2" />
+  
+  <!-- Elementos de la pantalla -->
+  <rect x="340" y="325" width="120" height="30" rx="5" ry="5" fill="#2563eb" opacity="0.8" />
+  <rect x="340" y="365" width="120" height="15" rx="2" ry="2" fill="#3b82f6" opacity="0.6" />
+  <rect x="340" y="390" width="80" height="15" rx="2" ry="2" fill="#3b82f6" opacity="0.6" />
+  <rect x="340" y="415" width="120" height="15" rx="2" ry="2" fill="#3b82f6" opacity="0.6" />
+  <rect x="340" y="440" width="100" height="15" rx="2" ry="2" fill="#3b82f6" opacity="0.6" />
+  
+  <!-- Botones laterales -->
+  <rect x="480" y="350" width="20" height="15" rx="2" ry="2" fill="#475569" stroke="#64748b" stroke-width="1" />
+  <rect x="480" y="380" width="20" height="15" rx="2" ry="2" fill="#475569" stroke="#64748b" stroke-width="1" />
+  <rect x="480" y="410" width="20" height="15" rx="2" ry="2" fill="#475569" stroke="#64748b" stroke-width="1" />
+  
+  <!-- Correa superior -->
+  <path d="M 350,220 Q 400,180 450,220 L 450,300 L 350,300 Z" fill="#334155" stroke="#475569" stroke-width="2" />
+  <path d="M 370,230 Q 400,200 430,230 L 430,280 L 370,280 Z" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  
+  <!-- Correa inferior -->
+  <path d="M 350,480 Q 400,520 450,480 L 450,400 L 350,400 Z" fill="#334155" stroke="#475569" stroke-width="2" />
+  <path d="M 370,470 Q 400,500 430,470 L 430,420 L 370,420 Z" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  
+  <!-- Marcador FENIX 8 -->
+  <text x="400" y="540" fill="#f59e0b" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold">FENIX 8 SOLAR</text>
+  <text x="400" y="260" fill="#f59e0b" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" font-weight="bold">GARMIN</text>
+  
+  <!-- Elementos premium -->
+  <circle cx="400" cy="340" r="12" fill="none" stroke="#f59e0b" stroke-width="2" />
+  <line x1="400" y1="320" x2="400" y2="328" stroke="#f59e0b" stroke-width="2" />
+  <line x1="400" y1="352" x2="400" y2="360" stroke="#f59e0b" stroke-width="2" />
+  <line x1="380" y1="340" x2="388" y2="340" stroke="#f59e0b" stroke-width="2" />
+  <line x1="412" y1="340" x2="420" y2="340" stroke="#f59e0b" stroke-width="2" />
+  
+  <!-- Detalles premium -->
+  <circle cx="400" cy="400" r="140" fill="none" stroke="#3b82f6" stroke-width="1" stroke-dasharray="2,4" />
+  <circle cx="400" cy="400" r="130" fill="none" stroke="#3b82f6" stroke-width="1" stroke-dasharray="2,6" />
+</svg>

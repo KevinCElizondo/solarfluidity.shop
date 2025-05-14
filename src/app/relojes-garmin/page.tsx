@@ -1,15 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import FeaturedWatches from './featured-watches';
-import CTASection from './cta-section';
-import FAQSection from './faq-section';
+import WatchCard from '@/components/WatchCard';
 
 export default function GarminWatchesPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-b from-blue-950 to-indigo-950 text-white">
       {/* Hero Section para Relojes Garmin */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-900 dark:from-black dark:via-gray-900 dark:to-blue-950 py-24 md:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-900 py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute w-full h-full opacity-20">
             {/* Patrón de líneas diagonal */}
@@ -221,13 +219,157 @@ export default function GarminWatchesPage() {
       </section>
       
       {/* Sección de productos destacados */}
-      <FeaturedWatches />
-      
-      {/* Call to Action */}
-      <CTASection />
-      
+      <section id="featured-watches" className="py-16 md:py-24 container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Relojes Garmin con Carga Solar</h2>
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">Descubre nuestra selección de relojes Garmin con tecnología solar, diseñados para mantener tu aventura sin interrupciones.</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <WatchCard 
+            title="Garmin Fenix 8 Solar"
+            imageUrl="/images/relojes/fenix8-solar.jpg"
+            description="El epítome de los relojes GPS para exteriores, diseñado para atletas y aventureros que buscan lo mejor en tecnología."
+            features={[
+              "Carga solar para hasta 48 días de batería en modo smartwatch",
+              "GPS avanzado con rutas dinámicas para navegación precisa",
+              "Altavoz y micrófono para llamadas y asistencia de voz",
+              "Medidor de profundidad para buceo hasta 40 metros",
+              "Diseño duradero con materiales de alta calidad"
+            ]}
+            price="$1,100"
+            affiliateLink="https://www.amazon.com/dp/B0DD5PNZ8J?tag=solarfluidity-20"
+          />
+
+          <WatchCard 
+            title="Garmin Enduro 3"
+            imageUrl="/images/relojes/enduro3.jpg"
+            description="Diseñado para atletas de ultraresistencia, con una vida útil de batería impresionante de hasta 320 horas en modo GPS con carga solar."
+            features={[
+              "Hasta 320 horas de batería en modo GPS con carga solar",
+              "Bisel de titanio ligero, con solo 63 gramos de peso",
+              "Métricas avanzadas de entrenamiento e insights de recuperación",
+              "Mapas mejorados y navegación con rutas dinámicas"
+            ]}
+            price="$851"
+            affiliateLink="https://www.amazon.com/dp/B0DD5N9G17?tag=solarfluidity-20"
+          />
+
+          <WatchCard 
+            title="Garmin Forerunner 965"
+            imageUrl="/images/relojes/forerunner965.jpg"
+            description="El sueño de todo corredor, con una pantalla AMOLED vibrante y mapas integrados para la navegación. Ideal para rastrear tus carreras sin preocuparte por recargar."
+            features={[
+              "Pantalla AMOLED para visibilidad clara y nítida",
+              "Mapas integrados y navegación para rutas precisas",
+              "Dinámicas avanzadas de carrera y métricas de entrenamiento",
+              "Almacenamiento de música y pagos sin contacto"
+            ]}
+            price="$499.99"
+            affiliateLink="https://www.amazon.com/dp/B0BXQTK1QN?tag=solarfluidity-20"
+          />
+
+          <WatchCard 
+            title="Garmin Instinct 2 Solar"
+            imageUrl="/images/relojes/instinct2-solar.jpg"
+            description="Diseñado para resistir las condiciones más duras, con una batería que puede durar indefinidamente con carga solar en condiciones óptimas."
+            features={[
+              "Carga solar para una batería prácticamente ilimitada",
+              "Diseño robusto según estándares militares",
+              "Navegación básica y mapeo para rutas preplanificadas",
+              "Monitoreo de salud y bienestar, incluyendo sueño y estrés"
+            ]}
+            price="$229.99"
+            affiliateLink="https://www.amazon.com/dp/B09NMKGRMZ?tag=solarfluidity-20"
+          />
+        </div>
+      </section>
+
+      {/* Sección de Tecnología Solar */}
+      <section id="technology" className="py-16 md:py-24 bg-gradient-to-br from-blue-900/30 to-indigo-900/30 backdrop-blur-md">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Tecnología de Carga Solar Garmin</h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">Descubre cómo la tecnología Power Glass™ de Garmin aprovecha la energía del sol para extender la duración de la batería de tu reloj.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-300">
+              <div className="bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-white">Lente Power Glass™</h3>
+              <p className="text-blue-100">Los relojes utilizan un lente solar especial que convierte la luz solar en energía, extendiendo la duración de la batería significativamente.</p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-300">
+              <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-white">Eficiencia Energética</h3>
+              <p className="text-blue-100">Combinado con algoritmos de gestión de energía avanzados, estos relojes optimizan el consumo para maximizar la duración de la batería.</p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-300">
+              <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-white">Durabilidad Extrema</h3>
+              <p className="text-blue-100">Construidos para resistir las condiciones más duras, estos relojes combinan robustez con tecnología sostenible para aventureros exigentes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
-      <FAQSection />
+      <section className="py-16 md:py-24 container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Preguntas Frecuentes</h2>
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">Todo lo que necesitas saber sobre los relojes Garmin con tecnología solar.</p>
+        </div>
+
+        <div className="max-w-3xl mx-auto divide-y divide-blue-800/30">
+          <div className="py-6">
+            <h3 className="text-xl font-bold mb-3 text-white">¿Cómo funciona la carga solar en los relojes Garmin?</h3>
+            <p className="text-blue-100">Los relojes Garmin con tecnología solar utilizan un lente Power Glass™ que convierte la luz solar en energía. Este sistema complementa la batería recargable convencional, extendiendo significativamente su duración.</p>
+          </div>
+
+          <div className="py-6">
+            <h3 className="text-xl font-bold mb-3 text-white">¿Cuánto extiende la carga solar la duración de la batería?</h3>
+            <p className="text-blue-100">Depende del modelo y las condiciones de uso. Por ejemplo, el Instinct 2 Solar puede funcionar indefinidamente con suficiente exposición solar en modo de ahorro de energía, mientras que el Fenix 8 Solar puede extender la duración de la batería hasta un 50% en condiciones óptimas.</p>
+          </div>
+
+          <div className="py-6">
+            <h3 className="text-xl font-bold mb-3 text-white">¿Necesito luz solar directa para cargar el reloj?</h3>
+            <p className="text-blue-100">La luz solar directa proporciona la carga más eficiente, pero estos relojes también pueden captar energía de la luz artificial y luz solar indirecta, aunque con menor eficiencia.</p>
+          </div>
+
+          <div className="py-6">
+            <h3 className="text-xl font-bold mb-3 text-white">¿Qué modelo de reloj solar Garmin es mejor para corredores?</h3>
+            <p className="text-blue-100">El Garmin Forerunner 965 es ideal para corredores gracias a sus métricas avanzadas de carrera, mapas detallados y pantalla AMOLED de alta resolución, mientras que el Enduro 3 es perfecto para corredores de ultra trail por su batería de extrema duración.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 md:py-24 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-md">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Potencia tu aventura con energía solar</h2>
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">Descubre la libertad de explorar sin preocuparte por la duración de la batería. Los relojes Garmin con tecnología solar te acompañan en cada paso del camino.</p>
+          <Link 
+            href="#featured-watches" 
+            className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/30 inline-block"
+          >
+            Explorar Relojes
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
