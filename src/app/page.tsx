@@ -1,7 +1,12 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import * as Motion from 'framer-motion';
+
+// Extraer el componente motion para evitar problemas de importación en Next.js
+const { motion } = Motion;
 
 export default function Home() {
   // Variantes de animación para elementos

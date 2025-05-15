@@ -1,7 +1,12 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import * as Motion from 'framer-motion';
+
+// Extraer el componente motion para evitar problemas de importación en Next.js
+const { motion } = Motion;
 
 interface WatchCardProps {
   title: string;
