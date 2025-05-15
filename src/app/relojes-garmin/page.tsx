@@ -238,7 +238,8 @@ export default function GarminWatchesPage() {
               "Diseño duradero con materiales de alta calidad"
             ]}
             price="$1,100"
-            affiliateLink="https://www.amazon.com/dp/B0DD5PNZ8J?tag=solarfluidity-20"
+            affiliateLink="https://amzn.to/43hTXN6"
+            model="fenix8"
           />
 
           <WatchCard 
@@ -252,7 +253,8 @@ export default function GarminWatchesPage() {
               "Mapas mejorados y navegación con rutas dinámicas"
             ]}
             price="$851"
-            affiliateLink="https://www.amazon.com/dp/B0DD5N9G17?tag=solarfluidity-20"
+            affiliateLink="https://amzn.to/3SyOPz0"
+            model="enduro3"
           />
 
           <WatchCard 
@@ -266,7 +268,8 @@ export default function GarminWatchesPage() {
               "Almacenamiento de música y pagos sin contacto"
             ]}
             price="$499.99"
-            affiliateLink="https://www.amazon.com/dp/B0BXQTK1QN?tag=solarfluidity-20"
+            affiliateLink="https://amzn.to/3GWHkPP"
+            model="forerunner965"
           />
 
           <WatchCard 
@@ -280,7 +283,8 @@ export default function GarminWatchesPage() {
               "Monitoreo de salud y bienestar, incluyendo sueño y estrés"
             ]}
             price="$229.99"
-            affiliateLink="https://www.amazon.com/dp/B09NMKGRMZ?tag=solarfluidity-20"
+            affiliateLink="https://amzn.to/3F8kOD4"
+            model="instinct2"
           />
         </div>
       </section>

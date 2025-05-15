@@ -1,24 +1,33 @@
-# Imágenes Requeridas para Solarfluidity.shop
+# Imágenes Requeridas para Solarfluidity.shop - Relojes Garmin Solar
 
-Este documento describe las imágenes que es necesario agregar al proyecto para que se muestren correctamente los productos y categorías en el sitio web.
+Este documento describe las imágenes que necesitas obtener manualmente para que los relojes Garmin se muestren correctamente en el sitio web. Hemos creado placeholders SVG, pero para una apariencia más profesional, recomendamos reemplazarlos con fotografías reales.
 
-## Imágenes de Categorías
+## Imágenes Principales de Relojes Garmin
 
-| Categoría | Ruta | Descripción |
-|-----------|------|-------------|
-| Relojes Garmin | `/public/images/categories/garmin-watches.jpg` | Imagen representativa de relojes Garmin con tecnología solar. Debe ser de alta calidad, preferiblemente mostrando un reloj Garmin en un entorno al aire libre con iluminación solar. |
+| Modelo | Ruta | Descripción | Estado |
+|--------|------|-------------|--------|
+| Garmin Fenix 8 Solar | `/public/images/relojes/fenix8-solar.jpg` | Imagen oficial del Garmin Fenix 8 Solar mostrando la pantalla y la carga solar. | Placeholder SVG creado |
+| Garmin Enduro 3 | `/public/images/relojes/enduro3.jpg` | Imagen del Garmin Enduro 3 resaltando su diseño ligero y características de ultra resistencia. | Placeholder SVG creado |
+| Garmin Forerunner 965 | `/public/images/relojes/forerunner965.jpg` | Imagen del Garmin Forerunner 965 mostrando su pantalla AMOLED y funcionalidades para corredores. | Placeholder SVG creado |
+| Garmin Instinct 2 Solar | `/public/images/relojes/instinct2-solar.jpg` | Imagen del Garmin Instinct 2 Solar en color Grafito resaltando su diseño resistente. | Placeholder SVG creado |
 
-## Imágenes de Productos
+## Imágenes Adicionales y Elementos de Diseño
 
-### Relojes Garmin
+| Tipo | Ruta | Descripción | Prioridad |
+|------|------|-------------|----------|
+| Banner Hero | `/public/images/hero-garmin-solar.jpg` | Imagen de alta calidad (1920x1080px) mostrando uno o varios relojes Garmin con carga solar en un entorno activo o al aire libre. | Alta |
+| Tecnología Solar | `/public/images/solar-technology.jpg` | Imagen que ilustre cómo funciona la tecnología de carga solar en los relojes (800x600px). | Media |
+| Personas usando relojes | `/public/images/lifestyle-garmin.jpg` | Imagen de personas realizando actividades al aire libre con relojes Garmin, para secciones testimoniales. | Media |
+| Patrón Solar | `/public/images/solar-pattern.svg` | Patrón SVG de diseño sutil para fondos relacionados con tecnología solar. | Alta |
+| Patrón de Líneas | `/public/images/pattern-lines.svg` | Patrón SVG de líneas para fondos y efectos visuales en secciones de producto. | Media |
 
-| Producto | Ruta Principal | Descripción |
-|----------|----------------|-------------|
-| Garmin Instinct 2 Solar | `/public/images/products/garmin-instinct-2-solar.jpg` | Imagen principal del Garmin Instinct 2 Solar en color Grafito. |
-| Garmin Instinct 2 Solar (Galería 1) | `/public/images/products/garmin-instinct-2-solar-1.jpg` | Imagen adicional mostrando el Garmin Instinct 2 Solar desde otro ángulo. |
-| Garmin Instinct 2 Solar (Galería 2) | `/public/images/products/garmin-instinct-2-solar-2.jpg` | Imagen adicional mostrando el Garmin Instinct 2 Solar en uso. |
-| Garmin Instinct 2 Solar (Galería 3) | `/public/images/products/garmin-instinct-2-solar-3.jpg` | Imagen adicional mostrando funcionalidades del Garmin Instinct 2 Solar. |
-| Garmin Fénix 7 Solar | `/public/images/products/garmin-fenix-7-solar.jpg` | Imagen principal del Garmin Fénix 7 Solar. |
+## Cómo Reemplazar las Imágenes
+
+1. Descarga imágenes oficiales de Garmin o fotografías de alta calidad de los relojes.
+2. Optimiza las imágenes para web: resolución de 800x800px para productos, formato JPG o WebP.
+3. Reemplaza los archivos en las rutas indicadas manteniendo los mismos nombres.
+
+**Nota:** Actualmente usamos imágenes SVG que hemos creado como placeholders. Estas imágenes SVG se ven bien, pero usar fotografías reales de los productos mejorará significativamente la apariencia profesional del sitio.
 | Garmin Fénix 7 Solar (Galería 1) | `/public/images/products/garmin-fenix-7-solar-1.jpg` | Imagen adicional mostrando el Garmin Fénix 7 Solar desde otro ángulo. |
 | Garmin Fénix 7 Solar (Galería 2) | `/public/images/products/garmin-fenix-7-solar-2.jpg` | Imagen adicional mostrando el Garmin Fénix 7 Solar en uso. |
 | Garmin Enduro 2 | `/public/images/products/garmin-enduro-2.jpg` | Imagen principal del Garmin Enduro 2. |

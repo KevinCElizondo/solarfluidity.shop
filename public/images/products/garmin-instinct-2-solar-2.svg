@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#111827" />
+  
+  <!-- Fondo con efecto de actividad al aire libre -->
+  <path d="M0,600 Q200,550 400,600 T800,600 V800 H0 Z" fill="#064e3b" opacity="0.3" />
+  <path d="M0,620 Q200,580 400,620 T800,620 V800 H0 Z" fill="#047857" opacity="0.2" />
+  <path d="M0,650 Q200,620 400,650 T800,650 V800 H0 Z" fill="#10b981" opacity="0.1" />
+  
+  <!-- Sol en el fondo -->
+  <circle cx="650" cy="150" r="60" fill="#f59e0b" opacity="0.3" />
+  <circle cx="650" cy="150" r="80" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.2" />
+  <circle cx="650" cy="150" r="100" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.1" />
+  
+  <!-- Silueta de brazo con reloj -->
+  <path d="M200,380 Q230,300 300,250 Q320,220 350,230 Q360,280 400,330 Q420,360 470,380 Q520,420 550,500 Q530,550 500,620 Q460,650 400,670 Q340,680 280,650 Q220,600 200,500 Q180,450 200,380 Z" fill="#4b5563" />
+  
+  <!-- Reloj en el brazo -->
+  <circle cx="400" cy="450" r="100" fill="#2d3748" stroke="#4a5568" stroke-width="5" />
+  <circle cx="400" cy="450" r="90" fill="#1a202c" stroke="#2d3748" stroke-width="3" />
+  
+  <!-- Panel solar -->
+  <circle cx="400" cy="450" r="85" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3,6" />
+  
+  <!-- Pantalla del reloj -->
+  <rect x="360" y="400" width="80" height="100" rx="8" ry="8" fill="#1e293b" stroke="#4a5568" stroke-width="2" />
+  
+  <!-- Elementos de la pantalla - Actividad deportiva -->
+  <circle cx="400" cy="420" r="15" fill="none" stroke="#3b82f6" stroke-width="2" />
+  <text x="400" y="425" fill="#60a5fa" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">16</text>
+  <line x1="370" y1="440" x2="430" y2="440" stroke="#60a5fa" stroke-width="1" />
+  <line x1="380" y1="460" x2="420" y2="460" stroke="#60a5fa" stroke-width="1" />
+  <line x1="370" y1="480" x2="430" y2="480" stroke="#60a5fa" stroke-width="1" />
+  
+  <!-- Texto informativo -->
+  <text x="400" y="600" fill="#f59e0b" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold">GARMIN INSTINCT 2 SOLAR</text>
+  <text x="400" y="640" fill="#60a5fa" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">En Uso Durante Actividad</text>
+  
+  <!-- Métricas de actividad -->
+  <text x="200" y="700" fill="#d1d5db" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Ritmo Cardíaco</text>
+  <text x="400" y="700" fill="#d1d5db" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">GPS Activo</text>
+  <text x="600" y="700" fill="#d1d5db" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Carga Solar</text>
+</svg>
