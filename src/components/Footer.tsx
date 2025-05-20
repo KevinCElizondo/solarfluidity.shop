@@ -35,7 +35,7 @@ export default function Footer() {
               <h3 className="text-xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">SolarFluidity</h3>
             </div>
             <p className="text-blue-100 mb-5 border-l-2 border-blue-500/30 pl-3 text-sm">
-              Su fuente especializada en soluciones de energía solar de alta tecnología para Costa Rica y toda América.
+              Su tienda especializada en relojes Garmin con tecnología solar, para aventureros que buscan la máxima duración de batería en sus aventuras.
             </p>
             <div className="flex space-x-4">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors duration-300 hover:scale-110 transform">
@@ -74,19 +74,34 @@ export default function Footer() {
             </ul>
           </div>
           
-          <div className="col-span-1">
-            <h3 className="text-lg font-semibold mb-4 relative inline-block">
-              Categorías
-              <span className="absolute -bottom-1 left-0 w-12 h-0.5 bg-gradient-to-r from-blue-400 to-indigo-500"></span>
-            </h3>
-            <ul className="space-y-2">
-              <li><Link href="/categorias/paneles-solares" className="text-blue-100 hover:text-white transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-blue-500/50 group-hover:bg-cyan-400 transition-colors"></span>Paneles Solares</Link></li>
-              <li><Link href="/categorias/kits-completos" className="text-blue-100 hover:text-white transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-blue-500/50 group-hover:bg-cyan-400 transition-colors"></span>Kits Completos</Link></li>
-              <li><Link href="/categorias/baterias" className="text-blue-100 hover:text-white transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-blue-500/50 group-hover:bg-cyan-400 transition-colors"></span>Baterías</Link></li>
-              <li><Link href="/categorias/inversores" className="text-blue-100 hover:text-white transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-blue-500/50 group-hover:bg-cyan-400 transition-colors"></span>Inversores</Link></li>
-              <li><Link href="/categorias/accesorios" className="text-blue-100 hover:text-white transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-blue-500/50 group-hover:bg-cyan-400 transition-colors"></span>Accesorios</Link></li>
-              <li><Link href="/categorias/cursos" className="text-blue-100 hover:text-white transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-blue-500/50 group-hover:bg-cyan-400 transition-colors"></span>Cursos</Link></li>
-            </ul>
+          <div className="col-span-1 lg:col-span-2">
+            <h3 className="text-lg font-medium border-l-3 border-blue-500 pl-3 mb-6">Relojes Garmin Solar</h3>
+            <div className="grid grid-cols-2 gap-4">
+              <Link href="/relojes-garmin#fenix8" className="flex items-center group">
+                <span className="block w-2 h-2 bg-cyan-400 rounded-full mr-2 group-hover:scale-150 transition-transform duration-300"></span>
+                <span className="text-blue-100 group-hover:text-white transition-colors duration-300">Garmin Fenix 8 Solar</span>
+              </Link>
+              <Link href="/relojes-garmin#enduro3" className="flex items-center group">
+                <span className="block w-2 h-2 bg-cyan-400 rounded-full mr-2 group-hover:scale-150 transition-transform duration-300"></span>
+                <span className="text-blue-100 group-hover:text-white transition-colors duration-300">Garmin Enduro 3</span>
+              </Link>
+              <Link href="/relojes-garmin#forerunner965" className="flex items-center group">
+                <span className="block w-2 h-2 bg-cyan-400 rounded-full mr-2 group-hover:scale-150 transition-transform duration-300"></span>
+                <span className="text-blue-100 group-hover:text-white transition-colors duration-300">Garmin Forerunner 965</span>
+              </Link>
+              <Link href="/relojes-garmin#instinct2" className="flex items-center group">
+                <span className="block w-2 h-2 bg-cyan-400 rounded-full mr-2 group-hover:scale-150 transition-transform duration-300"></span>
+                <span className="text-blue-100 group-hover:text-white transition-colors duration-300">Garmin Instinct 2 Solar</span>
+              </Link>
+              <Link href="/relojes-garmin#technology" className="flex items-center group">
+                <span className="block w-2 h-2 bg-cyan-400 rounded-full mr-2 group-hover:scale-150 transition-transform duration-300"></span>
+                <span className="text-blue-100 group-hover:text-white transition-colors duration-300">Tecnología Solar</span>
+              </Link>
+              <Link href="/relojes-garmin#benefits" className="flex items-center group">
+                <span className="block w-2 h-2 bg-cyan-400 rounded-full mr-2 group-hover:scale-150 transition-transform duration-300"></span>
+                <span className="text-blue-100 group-hover:text-white transition-colors duration-300">Beneficios</span>
+              </Link>
+            </div>
           </div>
           
           <div className="col-span-1">

@@ -28,11 +28,15 @@ Este documento describe las imágenes que necesitas obtener manualmente para que
 3. Reemplaza los archivos en las rutas indicadas manteniendo los mismos nombres.
 
 **Nota:** Actualmente usamos imágenes SVG que hemos creado como placeholders. Estas imágenes SVG se ven bien, pero usar fotografías reales de los productos mejorará significativamente la apariencia profesional del sitio.
-| Garmin Fénix 7 Solar (Galería 1) | `/public/images/products/garmin-fenix-7-solar-1.jpg` | Imagen adicional mostrando el Garmin Fénix 7 Solar desde otro ángulo. |
-| Garmin Fénix 7 Solar (Galería 2) | `/public/images/products/garmin-fenix-7-solar-2.jpg` | Imagen adicional mostrando el Garmin Fénix 7 Solar en uso. |
-| Garmin Enduro 2 | `/public/images/products/garmin-enduro-2.jpg` | Imagen principal del Garmin Enduro 2. |
-| Garmin Enduro 2 (Galería 1) | `/public/images/products/garmin-enduro-2-1.jpg` | Imagen adicional mostrando el Garmin Enduro 2 desde otro ángulo. |
-| Garmin Enduro 2 (Galería 2) | `/public/images/products/garmin-enduro-2-2.jpg` | Imagen adicional mostrando el Garmin Enduro 2 en uso. |
+
+## Imágenes Adicionales de Relojes
+
+| Modelo | Ruta | Descripción |
+|--------|------|-------------|
+| Garmin Fenix 8 Solar (Vista alternativa) | `/public/images/relojes/fenix8-solar-alt.jpg` | Vista lateral o desde otro ángulo del Fenix 8 Solar. |
+| Garmin Fenix 8 Solar (En uso) | `/public/images/relojes/fenix8-solar-in-use.jpg` | Imagen mostrando el reloj en uso durante actividades al aire libre. |
+| Garmin Enduro 3 (Vista alternativa) | `/public/images/relojes/enduro3-alt.jpg` | Vista detallada del Enduro 3 mostrando la corona o correa. |
+| Garmin Enduro 3 (En uso) | `/public/images/relojes/enduro3-in-use.jpg` | Imagen del reloj siendo usado durante una carrera o actividad de resistencia. |
 
 ## Imágenes Decorativas
 

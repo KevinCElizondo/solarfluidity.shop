@@ -1,0 +1,22 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#111827"/>
+  <path d="M0 0L1920 0L1920 1080L0 1080L0 0Z" fill="url(#paint0_radial_1_2)"/>
+  <g opacity="0.4">
+    <path d="M960 540m-350 0a350 350 0 1 0 700 0a350 350 0 1 0 -700 0" stroke="#3B82F6" stroke-width="2" stroke-dasharray="12 12"/>
+    <path d="M960 540m-250 0a250 250 0 1 0 500 0a250 250 0 1 0 -500 0" stroke="#60A5FA" stroke-width="2" stroke-dasharray="8 8"/>
+    <path d="M960 540m-150 0a150 150 0 1 0 300 0a150 150 0 1 0 -300 0" stroke="#93C5FD" stroke-width="2" stroke-dasharray="4 4"/>
+  </g>
+  <circle cx="960" cy="540" r="200" fill="url(#paint1_radial_1_2)" fill-opacity="0.2"/>
+  <text x="960" y="540" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="white">Banner Garmin Solar</text>
+  <text x="960" y="600" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#93C5FD">Imagen de alta calidad del banner pendiente</text>
+  <defs>
+    <radialGradient id="paint0_radial_1_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(960 540) rotate(90) scale(600 1066.67)">
+      <stop stop-color="#1E40AF" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#111827" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="paint1_radial_1_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(960 540) rotate(90) scale(200)">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

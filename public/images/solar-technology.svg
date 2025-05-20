@@ -1,0 +1,42 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#111827"/>
+  <path d="M0 0L800 0L800 600L0 600L0 0Z" fill="url(#paint0_linear_1_2)"/>
+  
+  <!-- Sol -->
+  <circle cx="200" cy="300" r="80" fill="url(#paint1_radial_1_2)"/>
+  <circle cx="200" cy="300" r="100" stroke="#F59E0B" stroke-width="2" stroke-dasharray="8 8"/>
+  <circle cx="200" cy="300" r="120" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="6 6" stroke-opacity="0.7"/>
+  <circle cx="200" cy="300" r="140" stroke="#F59E0B" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.4"/>
+  
+  <!-- Panel solar en reloj -->
+  <rect x="500" y="200" width="200" height="200" rx="100" fill="#1F2937" stroke="#60A5FA" stroke-width="4"/>
+  <rect x="520" y="220" width="160" height="160" rx="80" fill="#374151" stroke="#3B82F6" stroke-width="2"/>
+  <rect x="550" y="250" width="100" height="100" rx="50" fill="url(#paint2_linear_1_2)" stroke="#2563EB" stroke-width="3"/>
+  
+  <!-- Flechas de energía -->
+  <path d="M300 300 L 450 300" stroke="#F59E0B" stroke-width="3" stroke-dasharray="12 8"/>
+  <path d="M450 290 L 480 300 L 450 310 Z" fill="#F59E0B"/>
+  
+  <!-- Texto explicativo -->
+  <text x="400" y="100" font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="white">Tecnología Solar Garmin</text>
+  <text x="400" y="140" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#93C5FD">Power Glass™ convierte la luz solar en energía</text>
+  
+  <text x="200" y="420" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#FCD34D">Fuente de energía</text>
+  <text x="600" y="420" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#60A5FA">Panel Power Glass™</text>
+  <text x="400" y="500" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#D1D5DB">Imagen representativa - Reemplazar con fotografía de alta calidad</text>
+  
+  <defs>
+    <linearGradient id="paint0_linear_1_2" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E3A8A" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#111827" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="paint1_radial_1_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 300) rotate(90) scale(80)">
+      <stop stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </radialGradient>
+    <linearGradient id="paint2_linear_1_2" x1="550" y1="250" x2="650" y2="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E40AF"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+</svg>

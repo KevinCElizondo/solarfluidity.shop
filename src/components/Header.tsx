@@ -47,12 +47,8 @@ export default function Header() {
         <nav className="hidden md:flex gap-7">
           {[
             { href: "/", label: "Inicio" },
-            { href: "/categorias", label: "Categorías" },
-            { href: "/productos", label: "Productos" },
             { href: "/relojes-garmin", label: "Relojes Garmin" },
-            { href: "/blog", label: "Blog" },
-            { href: "/sobre-nosotros", label: "Sobre Nosotros" },
-            { href: "/contacto", label: "Contacto" }
+            { href: "/relojes-garmin#technology", label: "Tecnología Solar" }
           ].map((link) => (
             <Link 
               key={link.href} 
@@ -103,12 +99,8 @@ export default function Header() {
             <nav className="flex flex-col gap-3">
               {[
                 { href: "/", label: "Inicio" },
-                { href: "/categorias", label: "Categorías" },
-                { href: "/productos", label: "Productos" },
                 { href: "/relojes-garmin", label: "Relojes Garmin" },
-                { href: "/blog", label: "Blog" },
-                { href: "/sobre-nosotros", label: "Sobre Nosotros" },
-                { href: "/contacto", label: "Contacto" }
+                { href: "/relojes-garmin#technology", label: "Tecnología Solar" }
               ].map((link) => (
                 <Link 
                   key={link.href} 

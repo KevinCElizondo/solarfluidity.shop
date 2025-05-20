@@ -1,0 +1,60 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#111827"/>
+  <path d="M0 0L800 0L800 600L0 600L0 0Z" fill="url(#paint0_linear_1_2)"/>
+  
+  <!-- Siluetas de personas -->
+  <path d="M200 400 C 220 350, 180 300, 180 250 L 220 250 C 220 300, 180 350, 200 400 Z" fill="#4B5563"/>
+  <circle cx="200" cy="220" r="30" fill="#4B5563"/>
+  
+  <path d="M350 400 C 370 350, 330 300, 330 250 L 370 250 C 370 300, 330 350, 350 400 Z" fill="#4B5563"/>
+  <circle cx="350" cy="220" r="30" fill="#4B5563"/>
+  
+  <path d="M500 400 C 520 350, 480 300, 480 250 L 520 250 C 520 300, 480 350, 500 400 Z" fill="#4B5563"/>
+  <circle cx="500" cy="220" r="30" fill="#4B5563"/>
+  
+  <!-- Relojes en muñecas -->
+  <rect x="175" y="300" width="50" height="30" rx="5" fill="#3B82F6" stroke="white" stroke-width="2"/>
+  <rect x="325" y="300" width="50" height="30" rx="5" fill="#3B82F6" stroke="white" stroke-width="2"/>
+  <rect x="475" y="300" width="50" height="30" rx="5" fill="#3B82F6" stroke="white" stroke-width="2"/>
+  
+  <!-- Rays/Sparkles from watches -->
+  <path d="M200 315 L 160 330" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <path d="M200 315 L 150 315" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <path d="M200 315 L 160 300" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="2 2"/>
+  
+  <path d="M350 315 L 310 330" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <path d="M350 315 L 300 315" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <path d="M350 315 L 310 300" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="2 2"/>
+  
+  <path d="M500 315 L 460 330" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <path d="M500 315 L 450 315" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <path d="M500 315 L 460 300" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="2 2"/>
+  
+  <!-- Elementos de ambiente externo -->
+  <path d="M0 450 C 100 430, 300 470, 400 440 C 500 410, 700 460, 800 430 L 800 600 L 0 600 Z" fill="#2D3748"/>
+  <path d="M0 500 C 100 480, 300 520, 400 490 C 500 460, 700 510, 800 480 L 800 600 L 0 600 Z" fill="#1E293B"/>
+  
+  <!-- Montañas en el fondo -->
+  <path d="M0 250 L 200 100 L 400 200 L 600 50 L 800 180 L 800 450 L 0 450 Z" fill="#1F2937" stroke="#2D3748" stroke-width="1"/>
+  
+  <!-- Sol -->
+  <circle cx="650" cy="120" r="50" fill="url(#paint1_radial_1_2)"/>
+  <circle cx="650" cy="120" r="65" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="6 6" stroke-opacity="0.7"/>
+  <circle cx="650" cy="120" r="80" stroke="#F59E0B" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.4"/>
+  
+  <!-- Texto -->
+  <text x="400" y="100" font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="white">Aventuras Sin Límites</text>
+  <text x="400" y="140" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#93C5FD">Con relojes Garmin de carga solar</text>
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#D1D5DB">Imagen representativa - Reemplazar con fotografía de alta calidad</text>
+  
+  <defs>
+    <linearGradient id="paint0_linear_1_2" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#0F172A" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="paint1_radial_1_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(650 120) rotate(90) scale(50)">
+      <stop stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </radialGradient>
+  </defs>
+</svg>

@@ -39,10 +39,10 @@
   to = "/404.html"
   status = 404
 
-# Redirección para preservar URLs antiguas
+# Redirección para relojes Garmin
 [[redirects]]
-  from = "/categorias/*"
-  to = "/categorias/:splat"
+  from = "/garmin/*"
+  to = "/relojes-garmin"
   status = 301
 
 [functions]

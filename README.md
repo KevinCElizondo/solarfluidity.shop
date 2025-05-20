@@ -1,6 +1,6 @@
-# SolarFluidity.shop – Tienda Afiliada de Energía Solar
+# SolarFluidity.shop – Relojes Garmin con Tecnología Solar
 
-**SolarFluidity.shop** es una tienda afiliada especializada en productos de energía solar (paneles, kits, baterías, accesorios, cursos), enfocada principalmente en el mercado de Costa Rica con una visión de expansión hacia toda la región americana (Latinoamérica y Norteamérica).
+**SolarFluidity.shop** es una tienda afiliada especializada en relojes Garmin con tecnología solar, enfocada principalmente en el mercado de Costa Rica con una visión de expansión hacia toda la región americana (Latinoamérica y Norteamérica).
 
 ## 📚 Contenido
 
@@ -14,16 +14,18 @@
 
 ## Descripción del Proyecto
 
-SolarFluidity.shop es una tienda afiliada dedicada a la promoción y venta de productos relacionados con energía solar, incluyendo paneles solares, kits completos, baterías, inversores, accesorios y cursos educativos. El sitio está optimizado para SEO y diseñado para proporcionar información valiosa sobre energía renovable.
+SolarFluidity.shop es una tienda afiliada especializada exclusivamente en relojes Garmin con tecnología solar, destacando modelos premium como el Fenix 8 Solar, Enduro 3, Forerunner 965 y Instinct 2 Solar. El sitio está optimizado para SEO y diseñado con una estética futurista para proporcionar información detallada sobre estos relojes y los beneficios de su tecnología solar para aventureros y deportistas.
 
 ## Estructura del Sitio
 
-- **Inicio**: Presentación de la tienda y productos destacados
-- **Categorías**: Organización de productos por tipos
-- **Productos Individuales**: Páginas detalladas con enlaces de afiliado
-- **Blog**: Artículos informativos sobre energía solar
-- **Sobre Nosotros**: Información sobre la misión y visión
-- **Contacto**: Formulario y datos de contacto
+- **Inicio**: Presentación atractiva con diseño futurista mostrando los relojes Garmin destacados
+- **Relojes Garmin**: Página principal con todos los modelos de relojes Garmin con tecnología solar
+  - Garmin Fenix 8 Solar
+  - Garmin Enduro 3
+  - Garmin Forerunner 965
+  - Garmin Instinct 2 Solar
+- **Tecnología Solar**: Sección explicativa sobre cómo funciona la tecnología de carga solar de Garmin
+- **Beneficios**: Información sobre las ventajas de elegir relojes con tecnología solar para aventureros
 
 ## Tecnologías Utilizadas
 
