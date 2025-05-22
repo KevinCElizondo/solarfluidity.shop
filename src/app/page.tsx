@@ -169,18 +169,23 @@ export default function Home() {
                 <div className="relative overflow-hidden bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-lg rounded-2xl border border-white/5 shadow-xl group-hover:shadow-blue-500/10 transition-all duration-300">
                   <div className="absolute -inset-1 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-700"></div>
                   <div className="relative p-6">
-                    <div className="h-56 mb-4 relative">
+                    <div className="h-56 mb-4 relative overflow-hidden">
+                      {/* Efectos de degradado tecnológico */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-blue-600/30 to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                      <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-blue-900/70 to-transparent z-10 pointer-events-none"></div>
+                      <div className="absolute -inset-1 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-400/10 via-transparent to-transparent blur opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                      
                       <Image
                         src="/images/relojes/fenix8-solar.jpg"
                         alt="Garmin Fenix 8 Solar"
                         fill
-                        className="object-contain"
+                        className="object-contain z-0 transform group-hover:scale-105 transition-transform duration-700"
                       />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">Garmin Fenix 8 Solar</h3>
-                    <p className="text-sm text-blue-100 mb-4">El epítome de los relojes GPS para exteriores, diseñado para atletas y aventureros.</p>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">Garmin Fenix 8 Solar - 51 mm</h3>
+                    <p className="text-sm text-blue-100 mb-4">Premium GPS multideporte con pantalla de zafiro y carga solar integrada.</p>
                     <div className="flex justify-between items-center">
-                      <span className="text-lg font-bold text-white">$1,100</span>
+                      <span className="text-lg font-bold text-white">$999.99</span>
                       <span className="inline-block bg-blue-600/20 backdrop-blur-sm text-xs font-bold text-cyan-300 px-3 py-1 rounded-full">Premium</span>
                     </div>
                   </div>
@@ -200,18 +205,23 @@ export default function Home() {
                 <div className="relative overflow-hidden bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-lg rounded-2xl border border-white/5 shadow-xl group-hover:shadow-green-500/10 transition-all duration-300">
                   <div className="absolute -inset-1 bg-gradient-to-r from-green-600/20 to-emerald-600/20 blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-700"></div>
                   <div className="relative p-6">
-                    <div className="h-56 mb-4 relative">
+                    <div className="h-56 mb-4 relative overflow-hidden">
+                      {/* Efectos de degradado tecnológico */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-green-600/30 to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                      <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-green-900/70 to-transparent z-10 pointer-events-none"></div>
+                      <div className="absolute -inset-1 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-green-400/10 via-transparent to-transparent blur opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                      
                       <Image
                         src="/images/relojes/enduro3.jpg"
                         alt="Garmin Enduro 3"
                         fill
-                        className="object-contain"
+                        className="object-contain z-0 transform group-hover:scale-105 transition-transform duration-700"
                       />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">Garmin Enduro 3</h3>
-                    <p className="text-sm text-blue-100 mb-4">Diseñado para atletas de ultraresistencia, con batería impresionante.</p>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">Garmin Enduro 3 - 51 mm</h3>
+                    <p className="text-sm text-blue-100 mb-4">Ultra ligero para resistencia extrema, con hasta 90 días de batería.</p>
                     <div className="flex justify-between items-center">
-                      <span className="text-lg font-bold text-white">$851</span>
+                      <span className="text-lg font-bold text-white">$799.99</span>
                       <span className="inline-block bg-green-600/20 backdrop-blur-sm text-xs font-bold text-green-300 px-3 py-1 rounded-full">Ultra</span>
                     </div>
                   </div>
@@ -231,12 +241,17 @@ export default function Home() {
                 <div className="relative overflow-hidden bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-lg rounded-2xl border border-white/5 shadow-xl group-hover:shadow-cyan-500/10 transition-all duration-300">
                   <div className="absolute -inset-1 bg-gradient-to-r from-cyan-600/20 to-sky-600/20 blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-700"></div>
                   <div className="relative p-6">
-                    <div className="h-56 mb-4 relative">
+                    <div className="h-56 mb-4 relative overflow-hidden">
+                      {/* Efectos de degradado tecnológico */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-cyan-600/30 to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                      <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-cyan-900/70 to-transparent z-10 pointer-events-none"></div>
+                      <div className="absolute -inset-1 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-400/10 via-transparent to-transparent blur opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                      
                       <Image
                         src="/images/relojes/forerunner965.jpg"
                         alt="Garmin Forerunner 965"
                         fill
-                        className="object-contain"
+                        className="object-contain z-0 transform group-hover:scale-105 transition-transform duration-700"
                       />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">Garmin Forerunner 965</h3>
@@ -262,18 +277,23 @@ export default function Home() {
                 <div className="relative overflow-hidden bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-lg rounded-2xl border border-white/5 shadow-xl group-hover:shadow-amber-500/10 transition-all duration-300">
                   <div className="absolute -inset-1 bg-gradient-to-r from-amber-600/20 to-yellow-600/20 blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-700"></div>
                   <div className="relative p-6">
-                    <div className="h-56 mb-4 relative">
+                    <div className="h-56 mb-4 relative overflow-hidden">
+                      {/* Efectos de degradado tecnológico */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-amber-600/30 to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                      <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-amber-900/70 to-transparent z-10 pointer-events-none"></div>
+                      <div className="absolute -inset-1 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-400/10 via-transparent to-transparent blur opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                      
                       <Image
                         src="/images/relojes/instinct2-solar.jpg"
                         alt="Garmin Instinct 2 Solar"
                         fill
-                        className="object-contain"
+                        className="object-contain z-0 transform group-hover:scale-105 transition-transform duration-700"
                       />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">Garmin Instinct 2 Solar</h3>
-                    <p className="text-sm text-blue-100 mb-4">Diseñado para resistir condiciones extremas con batería prácticamente ilimitada.</p>
+                    <p className="text-sm text-blue-100 mb-4">Resistente según estándares militares con duración de batería ilimitada.</p>
                     <div className="flex justify-between items-center">
-                      <span className="text-lg font-bold text-white">$229.99</span>
+                      <span className="text-lg font-bold text-white">$255.28</span>
                       <span className="inline-block bg-amber-600/20 backdrop-blur-sm text-xs font-bold text-amber-300 px-3 py-1 rounded-full">Resistente</span>
                     </div>
                   </div>
