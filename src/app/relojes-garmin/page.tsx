@@ -56,16 +56,8 @@ export default function GarminWatchesPage() {
                   className="absolute inset-0 m-auto z-10 object-contain drop-shadow-2xl animate-float"
                   priority
                 />
-                {/* Texto flotante de características */}
-                <div className="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md rounded-xl px-4 py-2 border border-white/20 animate-float-delay">
-                  <span className="text-white text-sm font-medium">Batería infinita</span>
-                </div>
-                <div className="absolute bottom-10 right-0 transform translate-x-1/2 bg-white/10 backdrop-blur-md rounded-xl px-4 py-2 border border-white/20 animate-float">
-                  <span className="text-white text-sm font-medium">GPS Multi-banda</span>
-                </div>
-                <div className="absolute top-1/2 left-0 transform -translate-x-3/4 -translate-y-1/2 bg-white/10 backdrop-blur-md rounded-xl px-4 py-2 border border-white/20 animate-float-delay-2">
-                  <span className="text-white text-sm font-medium">100m resistente al agua</span>
-                </div>
+                {/* Textos flotantes eliminados */}
+                {/* Todas las etiquetas flotantes eliminadas */}
               </div>
             </div>
           </div>
@@ -349,7 +341,7 @@ export default function GarminWatchesPage() {
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">Descubre cómo la tecnología Power Glass™ de Garmin aprovecha la energía del sol para extender la duración de la batería de tu reloj.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-300">
               <div className="bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -378,6 +370,18 @@ export default function GarminWatchesPage() {
               </div>
               <h3 className="text-xl font-bold mb-3 text-white">Durabilidad Extrema</h3>
               <p className="text-blue-100">Construidos para resistir las condiciones más duras, estos relojes combinan robustez con tecnología sostenible para aventureros exigentes.</p>
+            </div>
+            
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-300 relative overflow-hidden group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600/20 to-pink-600/20 blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-700"></div>
+              <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full w-16 h-16 flex items-center justify-center mb-6 relative">
+                <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-white group-hover:text-purple-300 transition-colors">Próximamente</h3>
+              <p className="text-blue-100">Estamos trabajando en nuevas categorías y productos relacionados con tecnología solar y relojes Garmin. ¡Manténte atento!</p>
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </div>
           </div>
         </div>

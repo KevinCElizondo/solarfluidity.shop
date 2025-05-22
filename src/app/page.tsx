@@ -476,15 +476,27 @@ export default function Home() {
               Descubre la libertad de explorar sin preocuparte por la duración de la batería. Los relojes Garmin con tecnología solar te acompañan en cada paso del camino.
             </p>
             
-            <Link 
-              href="/relojes-garmin" 
-              className="relative inline-flex group"
-            >
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur opacity-60 group-hover:opacity-100 transition duration-200"></div>
-              <button className="relative px-10 py-4 bg-gradient-to-br from-gray-900 to-black rounded-full text-white font-medium border border-white/10 group-hover:border-cyan-400/50 transition-all duration-200">
-                Explorar Relojes Garmin Solar
-              </button>
-            </Link>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link 
+                href="/relojes-garmin" 
+                className="relative inline-flex group"
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur opacity-60 group-hover:opacity-100 transition duration-200"></div>
+                <button className="relative px-10 py-4 bg-gradient-to-br from-gray-900 to-black rounded-full text-white font-medium border border-white/10 group-hover:border-cyan-400/50 transition-all duration-200">
+                  Explorar Relojes Garmin Solar
+                </button>
+              </Link>
+              
+              <Link 
+                href="/blog/importancia-ejercicio" 
+                className="relative inline-flex group"
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full blur opacity-60 group-hover:opacity-100 transition duration-200"></div>
+                <button className="relative px-10 py-4 bg-gradient-to-br from-gray-900 to-black rounded-full text-white font-medium border border-white/10 group-hover:border-green-400/50 transition-all duration-200">
+                  Leer: Importancia del Ejercicio
+                </button>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
