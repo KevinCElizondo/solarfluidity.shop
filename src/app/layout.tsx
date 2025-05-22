@@ -26,6 +26,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="scroll-smooth">
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
+      </head>
       <body className={`${inter.className} bg-[#060d24] text-white antialiased min-h-screen flex flex-col`}>
         <ThemeProvider>
           <div className="mx-auto w-full max-w-screen-2xl">

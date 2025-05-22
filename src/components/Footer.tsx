@@ -132,17 +132,7 @@ export default function Footer() {
                   <span className="text-white font-medium">Global | 100% Online</span>
                 </div>
               </li>
-              <li className="flex items-start group">
-                <div className="p-2 mr-3 rounded-lg bg-blue-800/40 backdrop-blur-sm border border-blue-700/30 group-hover:bg-blue-700/50 transition-colors">
-                  <svg className="h-5 w-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <span className="block text-sm text-blue-200">Horario de atención</span>
-                  <span className="text-white font-medium">Lun - Vie | 8:00 - 18:00</span>
-                </div>
-              </li>
+              {/* Eliminada sección de horario de atención */}
             </ul>
           </div>
         </div>
