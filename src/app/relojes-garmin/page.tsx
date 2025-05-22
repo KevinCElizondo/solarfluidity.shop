@@ -228,17 +228,17 @@ export default function GarminWatchesPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div id="fenix8" className="relative">
             <WatchCard 
-              title="Garmin Fenix 8 Solar"
+              title="Garmin Fenix 8 Solar - 51 mm"
               imageUrl="/images/relojes/fenix8-solar.jpg"
-              description="El epítome de los relojes GPS para exteriores, diseñado para atletas y aventureros que buscan lo mejor en tecnología."
+              description="Premium GPS multideporte con pantalla de zafiro, batería de larga duración con carga solar, resistente al agua y con linterna LED integrada."
               features={[
-                "Carga solar para hasta 48 días de batería en modo smartwatch",
-                "GPS avanzado con rutas dinámicas para navegación precisa",
-                "Altavoz y micrófono para llamadas y asistencia de voz",
-                "Medidor de profundidad para buceo hasta 40 metros",
-                "Diseño duradero con materiales de alta calidad"
+                "Pantalla de zafiro resistente a arañazos y titanio premium",
+                "Batería de larga duración: hasta 29 días con carga solar",
+                "Resistente al agua hasta 100m y certificado para buceo",
+                "Linterna LED integrada para visibilidad en la oscuridad",
+                "GPS multibanda para precisión extrema en navegación"
               ]}
-              price="$1,100"
+              price="$999.99"
               affiliateLink="https://amzn.to/43hTXN6"
               model="fenix8"
             />
@@ -256,16 +256,17 @@ export default function GarminWatchesPage() {
 
           <div id="enduro3" className="relative">
             <WatchCard 
-              title="Garmin Enduro 3"
+              title="Garmin Enduro 3 - 51 mm"
               imageUrl="/images/relojes/enduro3.jpg"
-              description="Diseñado para atletas de ultraresistencia, con una vida útil de batería impresionante de hasta 320 horas en modo GPS con carga solar."
+              description="Diseñado para atletas de ultraresistencia, con pantalla de zafiro, ultraligero y con una batería extrema que soporta las aventuras más largas."
               features={[
-                "Hasta 320 horas de batería en modo GPS con carga solar",
-                "Bisel de titanio ligero, con solo 63 gramos de peso",
-                "Métricas avanzadas de entrenamiento e insights de recuperación",
-                "Mapas mejorados y navegación con rutas dinámicas"
+                "Hasta 90 días de batería en modo smartwatch con carga solar",
+                "320 horas en modo GPS con carga solar optimizada",
+                "Ultraligero: solo 63g para máximo confort en largas distancias",
+                "Linterna LED integrada para visibilidad en condiciones difíciles",
+                "Bisel de titanio con correa UltraFit de nylon ultraresistente"
               ]}
-              price="$851"
+              price="$799.99"
               affiliateLink="https://amzn.to/3SyOPz0"
               model="enduro3"
             />
@@ -285,12 +286,13 @@ export default function GarminWatchesPage() {
             <WatchCard 
               title="Garmin Forerunner 965"
               imageUrl="/images/relojes/forerunner965.jpg"
-              description="El sueño de todo corredor, con una pantalla AMOLED vibrante y mapas integrados para la navegación. Ideal para rastrear tus carreras sin preocuparte por recargar."
+              description="Reloj premium para running con pantalla AMOLED colorida, métricas avanzadas de entrenamiento y recuperación para corredores exigentes."
               features={[
-                "Pantalla AMOLED para visibilidad clara y nítida",
-                "Mapas integrados y navegación para rutas precisas",
-                "Dinámicas avanzadas de carrera y métricas de entrenamiento",
-                "Almacenamiento de música y pagos sin contacto"
+                "Pantalla AMOLED vibrante para visualización detallada de datos",
+                "Métricas avanzadas de entrenamiento y recuperación",
+                "Memoria interna de 32GB para música y mapas",
+                "Análisis de preparación para entrenamiento y estado de recuperación",
+                "Hasta 23 días de batería en modo smartwatch"
               ]}
               price="$499.99"
               affiliateLink="https://amzn.to/3GWHkPP"
@@ -312,14 +314,15 @@ export default function GarminWatchesPage() {
             <WatchCard 
               title="Garmin Instinct 2 Solar"
               imageUrl="/images/relojes/instinct2-solar.jpg"
-              description="Diseñado para resistir las condiciones más duras, con una batería que puede durar indefinidamente con carga solar en condiciones óptimas."
+              description="Reloj GPS resistente con capacidades de carga solar, soporte multi-GNSS, navegación Tracback y duración de batería ilimitada en las condiciones adecuadas."
               features={[
-                "Carga solar para una batería prácticamente ilimitada",
-                "Diseño robusto según estándares militares",
-                "Navegación básica y mapeo para rutas preplanificadas",
-                "Monitoreo de salud y bienestar, incluyendo sueño y estrés"
+                "Batería potencialmente ilimitada con luz solar suficiente",
+                "Resistencia militar MIL-STD-810 para condiciones extremas",
+                "Navegación Tracback para volver siempre al punto de inicio",
+                "Soporte multi-GNSS (GPS, GLONASS, Galileo)",
+                "Hasta 28 días de batería en modo smartwatch con carga solar"
               ]}
-              price="$229.99"
+              price="$255.28"
               affiliateLink="https://amzn.to/3F8kOD4"
               model="instinct2"
             />
