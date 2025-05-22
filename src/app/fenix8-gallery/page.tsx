@@ -12,27 +12,27 @@ export default function Fenix8GalleryPage() {
   // Array de imágenes del Fenix 8 Solar
   const fenixImages = [
     {
-      src: '/images/relojes/fenix8-gallery/Garmin fenix-1.jpg',
+      src: '/images/relojes/fenix8-gallery/Garmin-fenix-1.jpg',
       alt: 'Garmin Fenix 8 Solar - Vista frontal'
     },
     {
-      src: '/images/relojes/fenix8-gallery/Garmin fenix-2.jpg',
+      src: '/images/relojes/fenix8-gallery/Garmin-fenix-2.jpg',
       alt: 'Garmin Fenix 8 Solar - Vista lateral'
     },
     {
-      src: '/images/relojes/fenix8-gallery/Garmin fenix-3.jpg',
+      src: '/images/relojes/fenix8-gallery/Garmin-fenix-3.jpg',
       alt: 'Garmin Fenix 8 Solar - Vista en muñeca'
     },
     {
-      src: '/images/relojes/fenix8-gallery/Garmin fenix-4.jpg',
+      src: '/images/relojes/fenix8-gallery/Garmin-fenix-4.jpg',
       alt: 'Garmin Fenix 8 Solar - Interfaz de navegación'
     },
     {
-      src: '/images/relojes/fenix8-gallery/Garmin fenix-5.jpg',
+      src: '/images/relojes/fenix8-gallery/Garmin-fenix-5.jpg',
       alt: 'Garmin Fenix 8 Solar - Vista posterior'
     },
     {
-      src: '/images/relojes/fenix8-gallery/Garmin fenix-6.jpg',
+      src: '/images/relojes/fenix8-gallery/Garmin-fenix-6.jpg',
       alt: 'Garmin Fenix 8 Solar - Características adicionales'
     }
   ];

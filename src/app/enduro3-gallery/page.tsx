@@ -12,27 +12,27 @@ export default function Enduro3GalleryPage() {
   // Array de imágenes del Enduro 3
   const enduroImages = [
     {
-      src: '/images/relojes/enduro3-gallery/Garmin Enduro-1.jpg',
+      src: '/images/relojes/enduro3-gallery/Garmin-Enduro-1.jpg',
       alt: 'Garmin Enduro 3 - Vista frontal'
     },
     {
-      src: '/images/relojes/enduro3-gallery/Garmin Enduro-2.jpg',
+      src: '/images/relojes/enduro3-gallery/Garmin-Enduro-2.jpg',
       alt: 'Garmin Enduro 3 - Vista lateral'
     },
     {
-      src: '/images/relojes/enduro3-gallery/Garmin Enduro-3.jpg',
+      src: '/images/relojes/enduro3-gallery/Garmin-Enduro-3.jpg',
       alt: 'Garmin Enduro 3 - Vista en muñeca'
     },
     {
-      src: '/images/relojes/enduro3-gallery/Garmin Enduro-4.jpg',
+      src: '/images/relojes/enduro3-gallery/Garmin-Enduro-4.jpg',
       alt: 'Garmin Enduro 3 - Interfaz de ultracarreras'
     },
     {
-      src: '/images/relojes/enduro3-gallery/Garmin Enduro-5.jpg',
+      src: '/images/relojes/enduro3-gallery/Garmin-Enduro-5.jpg',
       alt: 'Garmin Enduro 3 - Vista posterior'
     },
     {
-      src: '/images/relojes/enduro3-gallery/Garmin Enduro-6.jpg',
+      src: '/images/relojes/enduro3-gallery/Garmin-Enduro-6.jpg',
       alt: 'Garmin Enduro 3 - Características adicionales'
     }
   ];

@@ -12,27 +12,27 @@ export default function Instinct2GalleryPage() {
   // Array de imágenes del Instinct 2 Solar
   const instinctImages = [
     {
-      src: '/images/relojes/instinct2-gallery/Garmin Instinct 2 Solar-1.jpg',
+      src: '/images/relojes/instinct2-gallery/Garmin-Instinct-2-Solar-1.jpg',
       alt: 'Garmin Instinct 2 Solar - Vista frontal'
     },
     {
-      src: '/images/relojes/instinct2-gallery/Garmin Instinct 2 Solar-2.jpg',
+      src: '/images/relojes/instinct2-gallery/Garmin-Instinct-2-Solar-2.jpg',
       alt: 'Garmin Instinct 2 Solar - Vista lateral'
     },
     {
-      src: '/images/relojes/instinct2-gallery/Garmin Instinct 2 Solar-3.jpg',
+      src: '/images/relojes/instinct2-gallery/Garmin-Instinct-2-Solar-3.jpg',
       alt: 'Garmin Instinct 2 Solar - Vista en muñeca'
     },
     {
-      src: '/images/relojes/instinct2-gallery/Garmin Instinct 2 Solar-4.jpg',
+      src: '/images/relojes/instinct2-gallery/Garmin-Instinct-2-Solar-4.jpg',
       alt: 'Garmin Instinct 2 Solar - Interfaz de entrenamiento'
     },
     {
-      src: '/images/relojes/instinct2-gallery/Garmin Instinct 2 Solar-5.jpg',
+      src: '/images/relojes/instinct2-gallery/Garmin-Instinct-2-Solar-5.jpg',
       alt: 'Garmin Instinct 2 Solar - Vista posterior'
     },
     {
-      src: '/images/relojes/instinct2-gallery/Garmin Instinct 2 Solar-6.jpg',
+      src: '/images/relojes/instinct2-gallery/Garmin-Instinct-2-Solar-6.jpg',
       alt: 'Garmin Instinct 2 Solar - Características adicionales'
     }
   ];

@@ -12,23 +12,23 @@ export default function Forerunner965GalleryPage() {
   // Array de imágenes del Forerunner 965
   const forerunnerImages = [
     {
-      src: '/images/relojes/forerunner965-gallery/forerunner965-1.jpg.jpg',
+      src: '/images/relojes/forerunner965-gallery/forerunner965-1.jpg',
       alt: 'Garmin Forerunner 965 - Vista frontal'
     },
     {
-      src: '/images/relojes/forerunner965-gallery/forerunner965-3.jpg.jpg',
+      src: '/images/relojes/forerunner965-gallery/forerunner965-3.jpg',
       alt: 'Garmin Forerunner 965 - Vista en muñeca'
     },
     {
-      src: '/images/relojes/forerunner965-gallery/forerunner965-4.jpg.jpg',
+      src: '/images/relojes/forerunner965-gallery/forerunner965-4.jpg',
       alt: 'Garmin Forerunner 965 - Interfaz de entrenamiento'
     },
     {
-      src: '/images/relojes/forerunner965-gallery/forerunner965-5.jpg.jpg',
+      src: '/images/relojes/forerunner965-gallery/forerunner965-5.jpg',
       alt: 'Garmin Forerunner 965 - Vista posterior'
     },
     {
-      src: '/images/relojes/forerunner965-gallery/forerunner965-6.jpg.jpg',
+      src: '/images/relojes/forerunner965-gallery/forerunner965-6.jpg',
       alt: 'Garmin Forerunner 965 - Características adicionales'
     }
   ];
