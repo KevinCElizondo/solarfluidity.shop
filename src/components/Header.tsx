@@ -69,16 +69,16 @@ export default function Header() {
             <ThemeSwitch />
           </div>
           
-          <Link 
-            href="/contacto" 
+          <button 
+            onClick={() => window.open('mailto:info@solarfluidity.shop', '_blank')}
             className="hidden md:flex relative overflow-hidden group bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-medium py-1.5 px-5 rounded-full text-sm shadow-lg shadow-blue-900/30 transition-all duration-300 items-center gap-2"
           >
             <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-cyan-400/20 to-blue-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             <svg className="h-4 w-4 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
             <span className="relative z-10">Contáctanos</span>
-          </Link>
+          </button>
           
           <button 
             className="md:hidden relative overflow-hidden text-white focus:outline-none bg-white/10 p-2 rounded-md hover:bg-white/20 transition-colors border border-white/10"

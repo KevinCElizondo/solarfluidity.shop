@@ -49,11 +49,12 @@ export default function GarminWatchesPage() {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 animate-pulse"></div>
                 <div className="absolute inset-[20px] rounded-full bg-gradient-to-r from-blue-600/20 to-indigo-600/20 animate-pulse" style={{ animationDelay: '1s' }}></div>
                 <Image
-                  src="/images/products/garmin-instinct-2-solar.jpg"
+                  src="/images/relojes/instinct2-solar.jpg"
                   alt="Garmin Instinct 2 Solar"
                   width={400}
                   height={400}
                   className="absolute inset-0 m-auto z-10 object-contain drop-shadow-2xl animate-float"
+                  priority
                 />
                 {/* Texto flotante de características */}
                 <div className="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md rounded-xl px-4 py-2 border border-white/20 animate-float-delay">
