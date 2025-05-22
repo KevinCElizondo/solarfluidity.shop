@@ -1,1 +1,46 @@
-enduro3.svg
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#111827" />
+  <!-- Reloj base -->
+  <circle cx="400" cy="400" r="180" fill="#1e293b" stroke="#64748b" stroke-width="6" />
+  <circle cx="400" cy="400" r="160" fill="#0f172a" stroke="#334155" stroke-width="4" />
+  
+  <!-- Panel solar titanio -->
+  <circle cx="400" cy="400" r="155" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="2,4" />
+  
+  <!-- Pantalla del reloj -->
+  <rect x="340" y="320" width="120" height="160" rx="10" ry="10" fill="#0f172a" stroke="#475569" stroke-width="2" />
+  
+  <!-- Elementos de la pantalla de Enduro 3 - Ultramaratón -->
+  <rect x="350" y="335" width="100" height="25" rx="5" ry="5" fill="#10b981" opacity="0.7" />
+  <line x1="350" y1="380" x2="450" y2="380" stroke="#10b981" stroke-width="2" />
+  <line x1="350" y1="400" x2="450" y2="400" stroke="#10b981" stroke-width="1" opacity="0.6" />
+  <line x1="350" y1="420" x2="450" y2="420" stroke="#10b981" stroke-width="1" opacity="0.6" />
+  <line x1="350" y1="440" x2="450" y2="440" stroke="#10b981" stroke-width="1" opacity="0.6" />
+  
+  <!-- Estadísticas de carrera -->
+  <text x="370" y="375" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">320hr</text>
+  <text x="420" y="375" fill="#f59e0b" font-family="Arial, sans-serif" font-size="10">GPS</text>
+  
+  <!-- Botones laterales -->
+  <rect x="470" y="350" width="20" height="15" rx="2" ry="2" fill="#64748b" stroke="#94a3b8" stroke-width="1" />
+  <rect x="470" y="380" width="20" height="15" rx="2" ry="2" fill="#64748b" stroke="#94a3b8" stroke-width="1" />
+  <rect x="470" y="410" width="20" height="15" rx="2" ry="2" fill="#64748b" stroke="#94a3b8" stroke-width="1" />
+  
+  <!-- Correa superior -->
+  <path d="M 350,220 Q 400,180 450,220 L 450,300 L 350,300 Z" fill="#334155" stroke="#475569" stroke-width="2" />
+  <path d="M 370,230 Q 400,200 430,230 L 430,280 L 370,280 Z" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  
+  <!-- Correa inferior -->
+  <path d="M 350,480 Q 400,520 450,480 L 450,400 L 350,400 Z" fill="#334155" stroke="#475569" stroke-width="2" />
+  <path d="M 370,470 Q 400,500 430,470 L 430,420 L 370,420 Z" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  
+  <!-- Marcador ENDURO 3 -->
+  <text x="400" y="540" fill="#10b981" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold">ENDURO 3</text>
+  <text x="400" y="260" fill="#10b981" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" font-weight="bold">GARMIN</text>
+  
+  <!-- Símbolos especiales de Enduro 3 -->
+  <path d="M 400,340 L 410,350 L 420,330 L 423,335 L 420,350 L 400,370 L 380,350 L 377,335 L 380,330 L 390,350 Z" fill="none" stroke="#10b981" stroke-width="1.5" />
+  
+  <!-- Titanio light -->
+  <text x="400" y="570" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">TITANIUM • ULTRA PERFORMANCE</text>
+</svg>

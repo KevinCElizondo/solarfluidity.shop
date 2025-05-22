@@ -16,6 +16,10 @@ export default function Forerunner965GalleryPage() {
       alt: 'Garmin Forerunner 965 - Vista frontal'
     },
     {
+      src: '/images/relojes/forerunner965-gallery/forerunner965-2.jpg',
+      alt: 'Garmin Forerunner 965 - Vista lateral'
+    },
+    {
       src: '/images/relojes/forerunner965-gallery/forerunner965-3.jpg',
       alt: 'Garmin Forerunner 965 - Vista en muñeca'
     },

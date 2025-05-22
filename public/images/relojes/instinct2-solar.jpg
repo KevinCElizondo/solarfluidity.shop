@@ -1,1 +1,56 @@
-instinct2-solar.svg
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#111827" />
+  <!-- Reloj base con diseño robusto militar -->
+  <circle cx="400" cy="400" r="180" fill="#1e293b" stroke="#374151" stroke-width="10" />
+  <circle cx="400" cy="400" r="160" fill="#0f172a" stroke="#1f2937" stroke-width="6" />
+  
+  <!-- Panel solar con indicación de carga -->
+  <circle cx="400" cy="400" r="155" fill="none" stroke="#fbbf24" stroke-width="3" stroke-dasharray="3,6" />
+  
+  <!-- Pantalla del reloj con diseño exclusivo de Instinct -->
+  <rect x="340" y="310" width="120" height="160" rx="5" ry="5" fill="#111827" stroke="#4b5563" stroke-width="3" />
+  
+  <!-- Pantalla interna característica del Instinct -->
+  <circle cx="400" cy="360" r="30" fill="#111827" stroke="#4b5563" stroke-width="2" />
+  
+  <!-- Elementos de la pantalla -->
+  <text x="400" y="345" fill="#fbbf24" font-family="monospace" font-size="14" text-anchor="middle">07:45</text>
+  <text x="385" y="360" fill="#fbbf24" font-family="monospace" font-size="10" text-anchor="end">MAY</text>
+  <text x="415" y="360" fill="#fbbf24" font-family="monospace" font-size="10" text-anchor="start">14</text>
+  <line x1="350" y1="390" x2="380" y2="390" stroke="#fbbf24" stroke-width="2" />
+  <line x1="350" y1="410" x2="370" y2="410" stroke="#fbbf24" stroke-width="2" />
+  <line x1="350" y1="430" x2="390" y2="430" stroke="#fbbf24" stroke-width="2" />
+  <line x1="350" y1="450" x2="360" y2="450" stroke="#fbbf24" stroke-width="2" />
+  
+  <!-- Indicador de sol -->
+  <circle cx="400" cy="395" r="10" fill="none" stroke="#fbbf24" stroke-width="1.5" />
+  <line x1="400" y1="380" x2="400" y2="385" stroke="#fbbf24" stroke-width="1.5" />
+  <line x1="400" y1="405" x2="400" y2="410" stroke="#fbbf24" stroke-width="1.5" />
+  <line x1="385" y1="395" x2="390" y2="395" stroke="#fbbf24" stroke-width="1.5" />
+  <line x1="410" y1="395" x2="415" y2="395" stroke="#fbbf24" stroke-width="1.5" />
+  
+  <!-- Botones laterales con estilo militar -->
+  <rect x="470" y="335" width="25" height="20" rx="3" ry="3" fill="#374151" stroke="#4b5563" stroke-width="2" />
+  <rect x="470" y="370" width="25" height="20" rx="3" ry="3" fill="#374151" stroke="#4b5563" stroke-width="2" />
+  <rect x="470" y="405" width="25" height="20" rx="3" ry="3" fill="#374151" stroke="#4b5563" stroke-width="2" />
+  <rect x="470" y="440" width="25" height="20" rx="3" ry="3" fill="#374151" stroke="#4b5563" stroke-width="2" />
+  
+  <!-- Botones a la izquierda -->
+  <rect x="305" y="370" width="25" height="20" rx="3" ry="3" fill="#374151" stroke="#4b5563" stroke-width="2" />
+  <rect x="305" y="405" width="25" height="20" rx="3" ry="3" fill="#374151" stroke="#4b5563" stroke-width="2" />
+  
+  <!-- Correa superior con diseño militar -->
+  <path d="M 350,220 Q 400,180 450,220 L 450,300 L 350,300 Z" fill="#1f2937" stroke="#374151" stroke-width="4" />
+  <path d="M 370,225 Q 400,195 430,225 L 430,280 L 370,280 Z" fill="#111827" stroke="#1f2937" stroke-width="2" />
+  
+  <!-- Correa inferior con diseño militar -->
+  <path d="M 350,480 Q 400,520 450,480 L 450,400 L 350,400 Z" fill="#1f2937" stroke="#374151" stroke-width="4" />
+  <path d="M 370,475 Q 400,505 430,475 L 430,420 L 370,420 Z" fill="#111827" stroke="#1f2937" stroke-width="2" />
+  
+  <!-- Marcador INSTINCT 2 SOLAR -->
+  <text x="400" y="540" fill="#fbbf24" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold">INSTINCT 2 SOLAR</text>
+  <text x="400" y="260" fill="#fbbf24" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" font-weight="bold">GARMIN</text>
+  
+  <!-- Datos militares -->
+  <text x="400" y="570" fill="#9ca3af" font-family="monospace" font-size="12" text-anchor="middle">MIL-STD-810 • INFINITE BATTERY</text>
+</svg>
