@@ -118,7 +118,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <span className="block text-sm text-blue-200">Correo electrónico</span>
-                  <span className="text-white font-medium">info@solarfluidity.shop</span>
+                  <span className="text-white font-medium">kevincordero@solarfluidity.com</span>
                 </div>
               </li>
               <li className="flex items-start group">

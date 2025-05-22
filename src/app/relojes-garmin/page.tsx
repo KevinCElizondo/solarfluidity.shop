@@ -49,8 +49,8 @@ export default function GarminWatchesPage() {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 animate-pulse"></div>
                 <div className="absolute inset-[20px] rounded-full bg-gradient-to-r from-blue-600/20 to-indigo-600/20 animate-pulse" style={{ animationDelay: '1s' }}></div>
                 <Image
-                  src="/images/relojes/instinct2-solar.jpg"
-                  alt="Garmin Instinct 2 Solar"
+                  src="/images/relojes/fenix8-gallery/Garmin-fenix-2.jpg"
+                  alt="Garmin Fenix 8 Solar"
                   width={400}
                   height={400}
                   className="absolute inset-0 m-auto z-10 object-contain drop-shadow-2xl animate-float"

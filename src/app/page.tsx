@@ -184,10 +184,18 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">Garmin Fenix 8 Solar - 51 mm</h3>
                     <p className="text-sm text-blue-100 mb-4">Premium GPS multideporte con pantalla de zafiro y carga solar integrada.</p>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center mb-3">
                       <span className="text-lg font-bold text-white">$999.99</span>
                       <span className="inline-block bg-blue-600/20 backdrop-blur-sm text-xs font-bold text-cyan-300 px-3 py-1 rounded-full">Premium</span>
                     </div>
+                    <a 
+                      href="https://amzn.to/43hTXN6"
+                      target="_blank"
+                      rel="nofollow noopener"
+                      className="block w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-medium py-2 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/30"
+                    >
+                      Comprar Ahora
+                    </a>
                   </div>
                 </div>
               </Link>
@@ -220,10 +228,18 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">Garmin Enduro 3 - 51 mm</h3>
                     <p className="text-sm text-blue-100 mb-4">Ultra ligero para resistencia extrema, con hasta 90 días de batería.</p>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center mb-3">
                       <span className="text-lg font-bold text-white">$799.99</span>
                       <span className="inline-block bg-green-600/20 backdrop-blur-sm text-xs font-bold text-green-300 px-3 py-1 rounded-full">Ultra</span>
                     </div>
+                    <a 
+                      href="https://amzn.to/3SyOPz0"
+                      target="_blank"
+                      rel="nofollow noopener"
+                      className="block w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-medium py-2 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/30"
+                    >
+                      Comprar Ahora
+                    </a>
                   </div>
                 </div>
               </Link>
@@ -256,10 +272,18 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">Garmin Forerunner 965</h3>
                     <p className="text-sm text-blue-100 mb-4">El sueño de todo corredor, con pantalla AMOLED y mapas integrados.</p>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center mb-3">
                       <span className="text-lg font-bold text-white">$499.99</span>
                       <span className="inline-block bg-cyan-600/20 backdrop-blur-sm text-xs font-bold text-cyan-300 px-3 py-1 rounded-full">Running</span>
                     </div>
+                    <a 
+                      href="https://amzn.to/3GWHkPP"
+                      target="_blank"
+                      rel="nofollow noopener"
+                      className="block w-full bg-gradient-to-r from-cyan-600 to-sky-600 hover:from-cyan-500 hover:to-sky-500 text-white font-medium py-2 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/30"
+                    >
+                      Comprar Ahora
+                    </a>
                   </div>
                 </div>
               </Link>
@@ -292,10 +316,18 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">Garmin Instinct 2 Solar</h3>
                     <p className="text-sm text-blue-100 mb-4">Resistente según estándares militares con duración de batería ilimitada.</p>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center mb-3">
                       <span className="text-lg font-bold text-white">$255.28</span>
                       <span className="inline-block bg-amber-600/20 backdrop-blur-sm text-xs font-bold text-amber-300 px-3 py-1 rounded-full">Resistente</span>
                     </div>
+                    <a 
+                      href="https://amzn.to/3F8kOD4"
+                      target="_blank"
+                      rel="nofollow noopener"
+                      className="block w-full bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-500 hover:to-yellow-500 text-white font-medium py-2 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-amber-500/30"
+                    >
+                      Comprar Ahora
+                    </a>
                   </div>
                 </div>
               </Link>
