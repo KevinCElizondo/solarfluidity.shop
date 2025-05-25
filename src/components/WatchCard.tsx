@@ -15,7 +15,7 @@ interface WatchCardProps {
   features: string[];
   price: string;
   affiliateLink: string;
-  model: 'fenix8' | 'enduro3' | 'forerunner965' | 'instinct2';
+  model: string;
 }
 
 const getGlowColor = (model: string) => {

@@ -2,8 +2,32 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import WatchCard from '@/components/WatchCard';
+import { fetchGarminWatches } from '@/lib/api';
 
-export default function GarminWatchesPage() {
+export default async function GarminWatchesPage() {
+  const { data: watches, error } = await fetchGarminWatches();
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-blue-950 to-indigo-950 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Error al cargar los relojes</h1>
+          <p className="text-blue-100">{error}</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!watches || watches.length === 0) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-blue-950 to-indigo-950 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">No se encontraron relojes</h1>
+          <p className="text-blue-100">No hay relojes disponibles en este momento</p>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-950 to-indigo-950 text-white">
       {/* Hero Section para Relojes Garmin */}
@@ -219,117 +243,32 @@ export default function GarminWatchesPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div id="fenix8" className="relative">
-            <WatchCard 
-              title="Garmin Fenix 8 Solar - 51 mm"
-              imageUrl="/images/relojes/fenix8-solar.jpg"
-              description="Premium GPS multideporte con pantalla de zafiro, batería de larga duración con carga solar, resistente al agua y con linterna LED integrada."
-              features={[
-                "Pantalla de zafiro resistente a arañazos y titanio premium",
-                "Batería de larga duración: hasta 29 días con carga solar",
-                "Resistente al agua hasta 100m y certificado para buceo",
-                "Linterna LED integrada para visibilidad en la oscuridad",
-                "GPS multibanda para precisión extrema en navegación"
-              ]}
-              price="$999.99"
-              affiliateLink="https://amzn.to/43hTXN6"
-              model="fenix8"
-            />
-            
-            {/* Botón para mostrar galería */}
-            <div className="mt-4 text-center">
-              <Link href="/fenix8-gallery" className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 hover:from-cyan-500/50 hover:to-blue-500/50 border border-white/10 rounded-full text-white text-sm transition-all duration-300">
-                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                Ver galería de imágenes
-              </Link>
+          {watches.map((watch) => (
+            <div key={watch.id} id={watch.id} className="relative">
+              <WatchCard 
+                title={watch.name}
+                imageUrl={watch.imageUrl}
+                description={watch.description}
+                features={watch.features || []}
+                price={`$${watch.price.toFixed(2)}`}
+                affiliateLink={watch.amazonAffiliateLink || '#'}
+                model={watch.id}
+              />
+              
+              {/* Botón para mostrar galería */}
+              <div className="mt-4 text-center">
+                <Link 
+                  href={`/${watch.id}-gallery`} 
+                  className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 hover:from-cyan-500/50 hover:to-blue-500/50 border border-white/10 rounded-full text-white text-sm transition-all duration-300"
+                >
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Ver galería de imágenes
+                </Link>
+              </div>
             </div>
-          </div>
-
-          <div id="enduro3" className="relative">
-            <WatchCard 
-              title="Garmin Enduro 3 - 51 mm"
-              imageUrl="/images/relojes/enduro3.jpg"
-              description="Diseñado para atletas de ultraresistencia, con pantalla de zafiro, ultraligero y con una batería extrema que soporta las aventuras más largas."
-              features={[
-                "Hasta 90 días de batería en modo smartwatch con carga solar",
-                "320 horas en modo GPS con carga solar optimizada",
-                "Ultraligero: solo 63g para máximo confort en largas distancias",
-                "Linterna LED integrada para visibilidad en condiciones difíciles",
-                "Bisel de titanio con correa UltraFit de nylon ultraresistente"
-              ]}
-              price="$799.99"
-              affiliateLink="https://amzn.to/3SyOPz0"
-              model="enduro3"
-            />
-            
-            {/* Botón para mostrar galería */}
-            <div className="mt-4 text-center">
-              <Link href="/enduro3-gallery" className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 hover:from-cyan-500/50 hover:to-blue-500/50 border border-white/10 rounded-full text-white text-sm transition-all duration-300">
-                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                Ver galería de imágenes
-              </Link>
-            </div>
-          </div>
-
-          <div id="forerunner965" className="relative">
-            <WatchCard 
-              title="Garmin Forerunner 965"
-              imageUrl="/images/relojes/forerunner965.jpg"
-              description="Reloj premium para running con pantalla AMOLED colorida, métricas avanzadas de entrenamiento y recuperación para corredores exigentes."
-              features={[
-                "Pantalla AMOLED vibrante para visualización detallada de datos",
-                "Métricas avanzadas de entrenamiento y recuperación",
-                "Memoria interna de 32GB para música y mapas",
-                "Análisis de preparación para entrenamiento y estado de recuperación",
-                "Hasta 23 días de batería en modo smartwatch"
-              ]}
-              price="$499.99"
-              affiliateLink="https://amzn.to/3GWHkPP"
-              model="forerunner965"
-            />
-            
-            {/* Botón para mostrar galería */}
-            <div className="mt-4 text-center">
-              <Link href="/forerunner965-gallery" className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 hover:from-cyan-500/50 hover:to-blue-500/50 border border-white/10 rounded-full text-white text-sm transition-all duration-300">
-                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                Ver galería de imágenes
-              </Link>
-            </div>
-          </div>
-
-          <div id="instinct2" className="relative">
-            <WatchCard 
-              title="Garmin Instinct 2 Solar"
-              imageUrl="/images/relojes/instinct2-solar.jpg"
-              description="Reloj GPS resistente con capacidades de carga solar, soporte multi-GNSS, navegación Tracback y duración de batería ilimitada en las condiciones adecuadas."
-              features={[
-                "Batería potencialmente ilimitada con luz solar suficiente",
-                "Resistencia militar MIL-STD-810 para condiciones extremas",
-                "Navegación Tracback para volver siempre al punto de inicio",
-                "Soporte multi-GNSS (GPS, GLONASS, Galileo)",
-                "Hasta 28 días de batería en modo smartwatch con carga solar"
-              ]}
-              price="$255.28"
-              affiliateLink="https://amzn.to/3F8kOD4"
-              model="instinct2"
-            />
-            
-            {/* Botón para mostrar galería */}
-            <div className="mt-4 text-center">
-              <Link href="/instinct2-gallery" className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 hover:from-cyan-500/50 hover:to-blue-500/50 border border-white/10 rounded-full text-white text-sm transition-all duration-300">
-                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                Ver galería de imágenes
-              </Link>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
