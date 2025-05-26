@@ -2,32 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import WatchCard from '@/components/WatchCard';
-import { fetchGarminWatches } from '@/lib/api';
+import { garminWatches } from '@/data/garminWatches';
 
-export default async function GarminWatchesPage() {
-  const { data: watches, error } = await fetchGarminWatches();
-
-  if (error) {
-    return (
-      <div className="min-h-screen bg-gradient-to-b from-blue-950 to-indigo-950 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">Error al cargar los relojes</h1>
-          <p className="text-blue-100">{error}</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (!watches || watches.length === 0) {
-    return (
-      <div className="min-h-screen bg-gradient-to-b from-blue-950 to-indigo-950 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">No se encontraron relojes</h1>
-          <p className="text-blue-100">No hay relojes disponibles en este momento</p>
-        </div>
-      </div>
-    );
-  }
+export default function GarminWatchesPage() {
+  const watches = garminWatches;
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-950 to-indigo-950 text-white">
       {/* Hero Section para Relojes Garmin */}
@@ -251,7 +229,7 @@ export default async function GarminWatchesPage() {
                 description={watch.description}
                 features={watch.features || []}
                 price={`$${watch.price.toFixed(2)}`}
-                affiliateLink={watch.amazonAffiliateLink || '#'}
+                amazonAffiliateLink={watch.amazonAffiliateLink || '#'}
                 model={watch.id}
               />
               

@@ -1,7 +1,7 @@
 // API service for frontend-backend communication
 import { Product } from '../types/product';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8002'; // Cambiamos a 8002 para evitar Kong
 
 interface ApiResponse<T> {
   data?: T;

@@ -14,7 +14,7 @@ interface WatchCardProps {
   description: string;
   features: string[];
   price: string;
-  affiliateLink: string;
+  amazonAffiliateLink: string;
   model: string;
 }
 
@@ -44,7 +44,7 @@ const WatchCard: React.FC<WatchCardProps> = ({
   description,
   features,
   price,
-  affiliateLink,
+  amazonAffiliateLink,
   model
 }) => {
   const glowColor = getGlowColor(model);
@@ -107,7 +107,7 @@ const WatchCard: React.FC<WatchCardProps> = ({
         </div>
         
         <Link
-          href={affiliateLink}
+          href={amazonAffiliateLink}
           target="_blank" 
           rel="nofollow noopener"
         >
