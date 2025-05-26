@@ -93,13 +93,17 @@ const WatchCard: React.FC<WatchCardProps> = ({
           transition={{ type: "spring", stiffness: 300, damping: 15 }}
           className="relative h-full w-full flex items-center justify-center"
         >
-          <Image
-            src={imageUrl}
-            alt={title}
-            width={200}
-            height={200}
-            className="object-contain drop-shadow-2xl filter transition-all duration-500 group-hover:brightness-110"
-          />
+          <div className="relative h-[200px] w-[200px] mx-auto">
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+            <Image
+              src={imageUrl}
+              alt={title}
+              width={200}
+              height={200}
+              className="object-contain drop-shadow-2xl filter transition-all duration-500 group-hover:brightness-110"
+              priority
+            />
+          </div>
         </motion.div>
         
         {/* Price tag */}
