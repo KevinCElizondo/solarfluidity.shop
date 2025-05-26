@@ -2,15 +2,25 @@
 
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
+import * as Motion from 'framer-motion';
+
+const { motion } = Motion;
 
 export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-
-  // Evitar hidratación inconsistente
+  
+  // Asegurar que el tema se aplique correctamente
   useEffect(() => {
+    // Forzar actualización de clases en el HTML
+    const root = window.document.documentElement;
+    if (theme === 'dark') {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
     setMounted(true);
-  }, []);
+  }, [theme]);
 
   // Si no está montado, muestra un placeholder para evitar cambios de layout
   if (!mounted) {
@@ -18,17 +28,20 @@ export default function ThemeSwitch() {
   }
 
   return (
-    <button
+    <motion.button
       aria-label="Toggle Dark Mode"
       type="button"
       className={`
-        relative flex items-center justify-center w-8 h-8 overflow-hidden rounded-full
-        transition-all duration-500
+        relative flex items-center justify-center w-10 h-10 overflow-hidden rounded-full
+        transition-all duration-500 shadow-inner
         ${theme === 'dark' 
-          ? 'bg-indigo-950 text-amber-300' 
-          : 'bg-blue-100 text-indigo-600'}
+          ? 'bg-gradient-to-br from-indigo-950 to-blue-950 text-amber-300 border border-indigo-800/30' 
+          : 'bg-gradient-to-br from-blue-50 to-sky-100 text-indigo-600 border border-sky-200/50'}
       `}
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      whileTap={{ scale: 0.9 }}
+      whileHover={{ scale: 1.05, rotate: 5 }}
+      transition={{ type: "spring", stiffness: 400, damping: 10 }}
     >
       <div className="absolute inset-0 w-full h-full">
         {theme === 'dark' ? (
@@ -93,6 +106,6 @@ export default function ThemeSwitch() {
           />
         </svg>
       )}
-    </button>
+    </motion.button>
   );
 }

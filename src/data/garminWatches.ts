@@ -14,7 +14,7 @@ export const garminWatches: GarminWatch[] = [
     price: 1100.00,
     discountPrice: null,
     categoryId: "garmin-watches",
-    imageUrl: "/images/garmin-fenix8.svg",
+    imageUrl: "/images/relojes/fenix8-solar.svg",
     features: [
       "Lente Power Glass™ para carga solar",
       "Hasta 39 días de duración de batería con carga solar",
@@ -29,7 +29,7 @@ export const garminWatches: GarminWatch[] = [
       "Resistencia al agua": "10 ATM"
     },
     amazonAffiliateLink: "https://amzn.to/3O07ZQl",
-    gallery: ["/images/garmin-fenix8.svg"],
+    gallery: ["/images/relojes/fenix8-solar.svg"],
     stock: 10,
     rating: 4.8,
     reviews: 120,
@@ -45,7 +45,7 @@ export const garminWatches: GarminWatch[] = [
     price: 851.00,
     discountPrice: null,
     categoryId: "garmin-watches",
-    imageUrl: "/images/garmin-enduro3.svg",
+    imageUrl: "/images/relojes/enduro3.svg",
     features: [
       "Batería de duración extrema con carga solar",
       "Hasta 90 días en modo reloj con carga solar",
@@ -60,7 +60,7 @@ export const garminWatches: GarminWatch[] = [
       "Resistencia al agua": "10 ATM"
     },
     amazonAffiliateLink: "https://amzn.to/3WMkzst",
-    gallery: ["/images/garmin-enduro3.svg"],
+    gallery: ["/images/relojes/enduro3.svg"],
     stock: 8,
     rating: 4.9,
     reviews: 85,
@@ -76,7 +76,7 @@ export const garminWatches: GarminWatch[] = [
     price: 499.99,
     discountPrice: null,
     categoryId: "garmin-watches",
-    imageUrl: "/images/garmin-forerunner965.svg",
+    imageUrl: "/images/relojes/forerunner965.svg",
     features: [
       "Pantalla AMOLED brillante con carga solar",
       "Hasta 23 días de batería con carga solar",
@@ -91,7 +91,7 @@ export const garminWatches: GarminWatch[] = [
       "Navegación": "Mapas a color"
     },
     amazonAffiliateLink: "https://amzn.to/3WChb1Z",
-    gallery: ["/images/garmin-forerunner965.svg"],
+    gallery: ["/images/relojes/forerunner965.svg"],
     stock: 12,
     rating: 4.7,
     reviews: 95,
@@ -107,7 +107,7 @@ export const garminWatches: GarminWatch[] = [
     price: 229.99,
     discountPrice: null,
     categoryId: "garmin-watches",
-    imageUrl: "/images/garmin-instinct2.svg",
+    imageUrl: "/images/relojes/instinct2-solar.svg",
     features: [
       "Duración de batería potencialmente ilimitada con carga solar",
       "Diseño resistente a golpes y sumergible hasta 100m",
@@ -122,7 +122,7 @@ export const garminWatches: GarminWatch[] = [
       "Perfiles": "Múltiples deportes preinstalados"
     },
     amazonAffiliateLink: "https://amzn.to/45cNPLe",
-    gallery: ["/images/garmin-instinct2.svg"],
+    gallery: ["/images/relojes/instinct2-solar.svg"],
     stock: 15,
     rating: 4.6,
     reviews: 150,

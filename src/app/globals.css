@@ -4,8 +4,43 @@
 
 /* Estilos personalizados adicionales */
 @layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 23 23 23;
+    --card: 255 255 255;
+    --card-foreground: 23 23 23;
+    --border: 240 240 240;
+    --input: 240 240 240;
+    --primary: 59 130 246;
+    --primary-foreground: 255 255 255;
+    --secondary: 0 184 217;
+    --secondary-foreground: 255 255 255;
+    --accent: 246 246 255;
+    --accent-foreground: 23 23 23;
+    --destructive: 255 53 53;
+    --ring: 59 130 246;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 10 15 30;
+    --foreground: 248 250 252;
+    --card: 30 41 59;
+    --card-foreground: 248 250 252;
+    --border: 30 41 59;
+    --input: 30 41 59;
+    --primary: 59 130 246;
+    --primary-foreground: 255 255 255;
+    --secondary: 0 184 217;
+    --secondary-foreground: 255 255 255;
+    --accent: 15 23 42;
+    --accent-foreground: 248 250 252;
+    --destructive: 255 53 53;
+    --ring: 59 130 246;
+  }
+  
   body {
-    @apply bg-gradient-to-br from-blue-950 to-indigo-950 text-white min-h-screen;
+    @apply bg-gradient-to-br from-[#060d24] to-[#0c1f4d] dark:from-[#060d24] dark:to-[#0c1f4d] text-white min-h-screen transition-colors duration-300;
   }
   h1 {
     @apply text-4xl md:text-5xl font-bold mb-6;
